@@ -1,0 +1,308 @@
+{% load static %}
+<!DOCTYPE html5>
+<html lang="en-US">
+   <head>
+      <title>Inflo main feed</title>
+      <!-- web files -->
+      <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+      <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+      
+      <!--end of web files -->
+      <!-- required scripts -->
+      <link rel="stylesheet" type="text/css" href="{% static 'users/css/mainfeed-style-v3.css' %}">
+      
+      <script type="text/javascript" src="{% static 'users/js/pagination.js' %}"></script>
+      <script type="text/javascript" src="{% static 'users/js/showhide.js' %}"></script>
+      <script type="text/javascript" src="{% static 'users/js/filtering.js' %}"></script>
+      <script type="text/javascript" src="{% static 'users/js/misc.js' %}"></script>
+      <script type="text/javascript" src="{% static 'users/js/articleData.js' %}"></script>
+      <script type="text/javascript" src="{% static 'users/js/commentData.js' %}"></script>
+      
+   </head>
+   <body>
+      <div>
+         <ul class="topnav">
+         <a href="#"><img src="{% static 'users/img/flo-icon.png' %}" ></a>
+         <li><a class="active" href="#">Dashboard</a></li>
+         <li><a href="#">Discover</a></li>
+         <div class="dropdown">
+            <img class="dropbtn" src="{% static 'users/img/signinimage.png' %}" >
+            <div class="dropdown-content">
+               <a href="#">My Profile</a>
+               <a href="#">Log Out</a>
+            </div>
+         </div>
+         <div id="notif-menu-container" class="notif-container">
+            <img id="NOTIF-ICON" src="{% static 'users/img/notif1.png' %}" style="float:right">
+            <div id="notif-MENU" class="impact-contents">
+               <h2>Notifications</h2>
+               <a>
+                  <h3>2 Connection Requests</h3>
+                  <h5>3 hours ago</h5>
+               </a>
+               <a>
+                  <h3>User B Commented on your share</h3>
+                  <h5>5 hours ago</h5>
+               </a>
+               <a>
+                  <h3>User C Reacted to your share</h3>
+                  <h5>Yesterday</h5>
+               </a>
+            </div>
+         </div>
+         <!-- SHARE URL Button and Menu -->
+         <div id="addURL-menu-container" class="addURL-container">
+            <button id="ADDURL" class="addurl">New Share</button>
+            <div id="ADDURL-MENU" class="addURL-contents">
+               <h4>Share from URL:</h4>
+               <div class="shareTo-AddURLMenu-div">
+                  <input class="input" id="URLinput" type="text" placeholder="www.news.com/news">
+                  <div class="flex_container newshare-fromURL">
+                     <textarea id="add-comment-box-new-story" type="text" placeholder="Add a comment" class="comment-input newShare autofit"></textarea>
+                  </div>
+                  <div class="postComment_container newshare-fromURL-commentType">
+                     <select id='sort-select' class="selector">
+                        <option value="Discussion">Discussion</option>
+                        <option value="Quote">Quote</option>
+                        <option value="Sentiment">Sentiment</option>
+                        <!-- emotional response -->
+                        <option value="Question">Question</option>
+                        <option value="Perspective">Perspective</option>
+                        <!-- point out bias or an alternative view -->    
+                        <option value="Context/Background">Big Picture</option>
+                        <!-- /*Context/Background*/ -->
+                        <option value="Fact Check">Fact Check</option>
+                        <option value="Related">Related</option>
+                        <!-- link to relevant info-->
+                     </select>
+                     <p>Comment Type:</p>
+                  </div>
+                  <div class="radioSection sharetoUsersection">
+                     <h4>Share to:</h4>
+                     <label class="container">Public
+                     <input id="MYNETWORK" type="radio" checked="checked" name="shareto-radio">
+                     <span class="checkmark"></span>
+                     </label>
+                     <!-- PLACEHOLDER -->
+                     <label class="container">My Network
+                     <input id="USER" type="radio" name="shareto-radio" value="user" disabled="disabled">
+                     <span class="checkmark"></span>
+                     </label>
+                     <button id="submitURL" class="addurl";>Submit</button>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- END OF SHARE URL Button and Menu -->
+      <br><br>
+      <div class="main">
+         <!--Filter panel-->
+         <div class="filtertoggle">
+               ...
+               </div>
+               <div class="filterhouse">
+               
+               <div class="filterpanel">
+                  <h1>Filter Options</h1>
+               
+                  <div class="category-selection">
+                     <h2>My Topics</h2>
+                        <h3 id="cat-none">None &nbsp</h3>/<h3 id="cat-all">&nbsp All</h3>
+                  <form>
+                        <label class="cat-list-container">Politics<input class="check_box" type="checkbox" name="cat" value="Politics" id="checkBox_politics">
+                           <span class="cat-checkmark"></span></label>
+                        <label class="cat-list-container">Business<input class="check_box" type="checkbox" name="cat" value="Business" id="checkBox_Business"><span class="cat-checkmark"></span></label>
+                        <label class="cat-list-container">Entertainment<input class="check_box" type="checkbox" name="cat" value="Entertainment" id="checkBox_Entertainment" ><span class="cat-checkmark"></span></label>
+                        <label class="cat-list-container">Tech<input class="check_box" type="checkbox" name="cat" value="Tech" id="checkBox_Tech"><span class="cat-checkmark"></span></label>
+                        <label class="cat-list-container">Sports<input class="check_box" type="checkbox" name="cat" value="Sports" id="checkBox_Sports"><span class="cat-checkmark"></span></label>
+                  </form>
+               
+               
+                  </div>
+               
+               
+                  <div class="topic-selection">
+                     <h2>Trending Topics</h2>	
+                  <!-- all topics to be automatically generated  --> 
+                  <ul style="list-style-type:none">
+                     <li>World Cup</li>
+                     <li>Fathers Day</li>
+                     <li>DragonBoatFestival</li>
+                     <li>Earthquake</li>
+                     <li>China</li>
+                  </ul>
+               
+                  <input class="input" id="search-box" type="text" placeholder="Search topic by keyword">
+               
+                  </div>
+               
+                  </div>
+               
+               </div>
+         <div class="content_view">
+            <div class="content_view-nav">
+               <button class="button-left" id="filtertogglebtn">Filter</button>
+               <div class="community-select-topnav-div">
+                  <select id='COMMUNITY-SELECT-TOPNAV' class="community_selector">
+                     <option value="myNet">Public</option>
+                     <option value="Comm1" disabled="disabled">My Network</option>
+                  </select>
+               </div>
+               <div class="cb_layout-header">
+                  <h2 id="category-title-1"></h2>
+                  <p>Sort By:</p>
+                  <select id='sort-select' class="selector">
+                     <option value="recent">Most Recently Shared</option>
+                     <option value="recent">Most Recently Published</option>
+                     <option value="mostactivity">Most Activity</option>
+                     <option value="recentactivity">Most Recent Activity</option>
+                  </select>
+               </div>
+            </div>
+            <!--make a nice and clean layout of content blocks -->
+            <br>
+            <div class="mainfeed_container" id="t1">
+               
+            </div>
+         </div>
+      </div>
+
+      
+      <!-- end of modal -->
+      <script>
+        
+         var image_signin = "{% static 'users/img/signinimage.png' %}"
+         var image_more = "{% static 'users/img/more.png' %}"
+         var image_comment = "{% static 'users/img/comment.png' %}"
+         var current_user_id = {{currentUserID}}
+         let loadedArticles = {};
+
+function getUserText(user) {
+  userText =
+    '<div class = "sharedby_user"><img id="sharedby_user1" src="' +
+    image_signin +
+    '"><h5 class="sharedby_text" id="SHAREDBY2">Shared by ' +
+    user.Name +
+    ' on <span id="timePosted-cb">' +
+    user.Time +
+    "</span></h5></div>";
+  return userText;
+}
+function append(data, direction) {
+  console.log(data);
+  var storyID = data.storyid;
+  var date = data.date;
+  var headline = data.headline;
+  var thumbnail = data.thumbnail;
+  var details_long = data.details;
+  var details_short = details_long.substring(0, 120) + "...";
+  var origStory = data.originalstory;
+  var sourceName = data.source;
+  var sourceURL = data.sourcelink;
+  var timePosted = data.timeposted.substring(0, 8);
+  var category = data.category;
+  var isNews = data.isnews;
+  var users = data.users;
+
+  loadedArticles[storyID] = data;
+  if (isNews) {
+    userText = "";
+
+    if (users) {
+      for (user in users) {
+        userText += getUserText(users[user]);
+      }
+    } else {
+      userText = getUserText(data.user);
+    }
+
+    text =
+      '<div class="cb_container" id="cb' +
+      storyID +
+      '"><div class="cb_layout" id="t1CB2">        <div class="cb_top">            <div class="cb_tag" id = TAG' +
+      storyID +
+      '><p>pocky</p>         </div>            <div class="cb_tag">                <p>tag2</p>            </div>            <div class="cb_tag">                <p>tag3</p>            </div>            <div class="cb_tag">                <p>+5</p>            </div>            <div class="more"><img src="' +
+      image_more +
+      '"></div>        </div>  <div  id="IPI" class="imagePlusInfo"><a id="image' +
+      storyID +
+      '" href="' +
+      sourceURL +
+      '"><div class="image_container"><img id="CB' +
+      storyID +
+      '-img" src="#"></div></a>            <div id="cb2-info" class="info">                <h2 class="sourceAndDate" id="SOURCE' +
+      storyID +
+      '">Reuters</h2>                <h2 class="sourceAndDate" id="DATETIME' +
+      storyID +
+      '">2018-07-03 23:43:43</h2>                        <a class="headline" id="HEADLINE' +
+      storyID +
+      '" href="' +
+      sourceURL +
+      '">The cover-up: Malaysian officials reveal just how much 1MDB probe was obstructed</a>                <a class="description" id="DESCRIPTION' +
+      storyID +
+      '" href="' +
+      sourceURL +
+      '">The government of former Malaysian prime minister Najib Razak spent years systematically obstructing probes into...</a>             </div>        </div>                <br>        <div id="BUTTONLAYER" class="cb_button-layer">' +
+      "<div class='sharedbyicon' id = 'sbiStoryID" +
+      storyID +
+      "'><!-- append users here if more than one -->" +
+      userText +
+      '</div><div class="buttonContain" id="cb' +
+      storyID +
+      '"  onclick="openComment(' +
+      storyID +
+      ')"><img id="commentBtn1" src="' +
+      image_comment +
+      '"></div></div>    </div>';
+
+    if (direction == "prepend") {
+      $("#t1").prepend(text);
+    } else {
+      $("#t1").append(text);
+    }
+    $("#DATETIME" + storyID).text(loadedArticles[storyID].date);
+    $("#HEADLINE" + storyID).text(loadedArticles[storyID].headline);
+    $("#DESCRIPTION" + storyID).text(
+      loadedArticles[storyID].details.substring(0, 120) + "..."
+    );
+    $("#CB" + storyID + "-img").attr("src", loadedArticles[storyID].thumbnail);
+    $("#SOURCE" + storyID).text(loadedArticles[storyID].sourceName);
+    $("#timePosted-cb" + storyID).text(loadedArticles[storyID].timePosted);
+    $("#cat_label-" + storyID).text(loadedArticles[storyID].category);
+    $("#DESCRIPTION" + storyID).attr("href", loadedArticles[storyID].sourceURL);
+    $("#HEADLINE" + storyID).attr("href", loadedArticles[storyID].sourceURL);
+    $("#image" + storyID).attr("href", loadedArticles[storyID].sourceURL);
+    $("#TAG" + storyID).text(category);
+    $("#cb" + storyID).attr("cat", category);
+    console.log(category);
+
+    //END OF MODAL (EXPANDED) CB //
+  } else {
+    $("#URLinput").after(
+      '<p style="color:red">Sorry, you\'re share could not be posted because we currently do not support this content.</p>'
+    );
+  }
+}
+         {% for story in stories %}
+            users = `{{story.users|safe}}`
+            obj = {
+                storyid: {{story.storyid}},
+                date : "{{story.timeposted}}",
+                source : "{{story.source}}",
+                thumbnail : "{{story.thumbnail}}",
+                details : `{{story.details}}`,
+                headline : "{{story.headline}}",
+                originalstory: "{{story.originalstory}}",
+                sourcelink: "{{story.sourcelink}}",
+                url: "{{story.url}}",
+                keywords: "{{story.keywords}}",
+                timeposted: "{{story.timeposted}}",
+                category: "{{story.category}}",
+                isnews: "{{story.isnews}}",
+                users:JSON.parse(users.replace(/'/g, '"')),
+            }
+            append(obj,"append");
+         {% endfor %}
+      </script>
+   </body>
+</html>

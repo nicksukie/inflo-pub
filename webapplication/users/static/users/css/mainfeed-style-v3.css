@@ -1,0 +1,2376 @@
+body {	
+	background-color: #e7ecf1;
+	font-family: helvetica;
+	min-width:600px;
+	height: 100%;
+	margin: 0;
+}
+
+
+p {
+	color: black;
+	font-family: helvetica;
+	font-size: 12px;
+	margin: 3px;
+}
+
+
+br {
+
+	line-height: 1;
+}
+
+h1 {
+	color: black;
+	font-family: helvetica;
+	font-size: 300%;
+
+}
+
+h2 {
+	color: black;
+	font-family: helvetica;
+	font-size: 120%;
+
+}
+
+h4 {
+	margin: 0;
+	color: #363A40;
+
+}
+
+
+
+a {
+	color: black;
+	text-decoration: none;
+
+
+}
+
+
+
+.show {
+	display: block;
+}
+
+
+/*  https://www.w3schools.com/css/css_align.asp */
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+
+/* change list style to nav bar format*/
+
+
+
+.main {
+
+		z-index: 0;
+		height: 	100%;
+
+	}
+
+
+
+.main,
+.topnav {
+position: 	relative;
+}
+
+
+.topnav  {	
+list-style-type: none; 
+margin: 0;
+padding: 0;
+
+background-color: #333;
+font-family: helvetica;
+
+height: 50px;
+/*margin-bottom: -50px;*/
+
+width: 100%;
+min-width: 600px;
+font-size: 12px;
+
+
+border-top: 3px solid;
+border-color: #008CBA;
+box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.2); 
+z-index: 	1;
+
+position: fixed;
+
+
+}
+
+
+.topnav-scrolled {
+  position: fixed;
+
+  top: 0;
+}
+
+
+.topnav>li {
+    float: left;
+}
+
+
+.topnav>a>img {
+
+height: 25px;
+padding: 10px;
+display: block;
+	float: left;
+
+}
+
+
+
+ul.topnav li a {
+	display: block;
+	color: white;
+	background-color: #333;
+	text-align: center;
+	padding: 15px 15px;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+
+
+.community-select-topnav-div {
+
+
+    border:none;
+    font-weight: normal;
+    font-size: 14px;
+    padding: 5px;
+    margin: 3px 5px ;
+    float: left; 
+    display: inline-block;
+    position: relative;
+    width: 125px;		
+    border-radius: 4px;
+
+}
+
+
+#COMMUNITY-SELECT-TOPNAV {
+
+    width: 90%;
+        padding: 5px;
+    margin: 0px 0px ;
+    height: 28px;
+
+}
+
+.addURL-container {
+	position: relative	;
+
+	float: right;
+
+	display: inline-block;
+	margin-right: 30px;
+
+}
+
+
+.addURL-contents {
+	display: none;
+	position: absolute;
+	background-color: #f9f9f9;
+	width: 300px;
+	padding: 8px;
+	box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.2);
+	z-index: 1000;
+	float: left;
+
+	top: 45px;
+	right: 0;
+	color: black;
+	margin: 0;
+	text-decoration: none;
+		float: 	left;
+	text-align: left;
+	border-radius: 	4px;
+
+
+}
+
+.addURL-contents.show {
+display: block;
+}
+
+
+
+div.addURL-contents h2 {
+background-color: 	#eff0f1;
+font-size: 	17px;
+padding: 	5px;
+display: 	block;	
+padding-left: 28px;
+margin: 	0;
+}
+
+
+
+.shareTo-AddURLMenu-div {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin: 0px 0px;
+	padding: 0px;
+	width: 	90%;
+	display: 	block;
+	float: 	left;
+	text-align: 	left;
+
+}
+
+
+.shareTo-AddURLMenu-div>h4 {
+	margin:0px;
+	display: block;
+	float: 	left;
+	text-align: 	left;
+	font-size: 12px;
+}
+
+.shareTo-AddURLMenu-div>label {
+
+	margin-top: 0px;
+	display: block;
+	float: 	left;
+	text-align: 	left;
+
+}
+
+
+.shareTo-AddURLMenu-div>button {
+
+	margin: 0px;
+	display: inline-block;
+	float: right;
+
+
+}
+
+
+
+
+
+/*Share to User */
+
+
+.AddURLMenu {
+    margin-left: 50px;
+    width: 80%;
+    display: none;
+}
+
+
+.user {
+    margin-left: 50px;
+    display: none;
+}
+
+
+
+.community {
+    margin-left: 50px;
+    display: none;
+}
+
+
+
+#AddURL-userInput {
+    background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+    background-position: 10px 12px; /* Position the search icon */
+    background-repeat: no-repeat; /* Do not repeat the icon image */
+
+    font-size: 12px; /* Increase font-size */
+    padding: 6px 10px 6px 10px; /* Add some padding */
+    border: 1px solid #ddd; /* Add a grey border */
+    margin-bottom: 6px; /* Add some space below the input */
+
+}
+
+#AddURL-shareUserUL {
+    /* Remove default list styling */
+    display: 	block;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+
+    margin-bottom: 15px;
+    overflow: auto;
+    width: 100%
+}
+
+#AddURL-shareUserUL li a {
+    border: 1px solid #ddd; /* Add a border to all links */
+    margin-top: -1px; /* Prevent double borders */
+    background-color: #f6f6f6; /* Grey background color */
+    padding: 3px; /* Add some padding */
+    text-decoration: none; /* Remove default text underline */
+    font-size: 10px; /* Increase the font-size */
+    color: black; /* Add a black text color */
+    display: block; /* Make it into a block element to fill the whole list */
+}
+
+#AddURL-shareUserUL li a:hover:not(.header) {
+    background-color: #eee; /* Add a hover effect to all links, except for headers */
+}
+
+
+
+/*Share to Community */
+
+/* The container */
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-left: 25px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    	line-height: 25px;
+	vertical-align: middle;
+
+}
+
+/* Hide the browser's default radio button */
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+    background-color: #2196F3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) 
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}*/
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
+
+
+select.community_selector {
+
+    width: 50%;
+    padding: 6px 6px;
+    margin-left: 8px;
+    border: none;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+    display: inline-block;
+}
+
+
+
+
+
+.impact-container {
+	position: relative	;
+
+	float: right;
+
+	display: inline-block;
+
+}
+
+
+.impact-container img {
+		display: block;
+	color: white;
+	background-color: #333;
+	text-align: center;
+	padding: 15px 15px;
+	text-decoration: none;
+	cursor: pointer;
+	height: 25px;
+		padding: 10px;
+
+	float: left;
+}
+
+.impact-contents {
+	display: none;
+	position: absolute;
+	background-color: #f9f9f9;
+	width: 300px;
+
+	box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.2);
+	z-index: 1000;
+	float: left;
+
+	top: 45px;
+	right: 0;
+	color: black;
+		margin: 	0px;
+	text-decoration: none;
+		float: 	left;
+	text-align: left;
+	border-radius: 	4px;
+	max-height: 250px;
+	overflow: auto;
+
+
+}
+
+.impact-contents.show {
+display: block;
+}
+
+
+
+div.impact-contents h2 {
+background-color: 	#eff0f1;
+font-size: 	17px;
+padding: 	5px;
+display: 	block;	
+padding-left: 28px;
+margin: 	0;
+}
+
+
+div.impact-contents a {
+display: 	block;	
+padding-left: 10px;
+padding-top: 	10px;
+padding-bottom: 	10px;
+cursor: pointer;	
+border-bottom: 	1px solid lightgrey	;
+}
+
+div.impact-contents h3 {
+
+font-size: 	14px;
+padding: 	5px;
+display: 	inline-block;	
+
+margin: 0;
+font-weight: 	normal;
+
+}
+
+div.impact-contents h4 {
+
+font-size: 	14px;
+padding: 	5px;
+display: 	inline-block;	
+padding-left: 10px;
+padding-top: 	10px;
+padding-bottom: 	10px;
+margin: 0;
+font-weight: 	normal;
+
+	color: 	green;
+}
+
+div.impact-contents h5 {
+
+font-size: 	12px;
+padding: 	5px;
+display: 	inline-block;	
+padding-left: 10px;
+padding-top: 	10px;
+padding-bottom: 	10px;
+padding-right: 	15px;
+margin: 0;
+font-weight: 	normal;
+float: 	right;
+
+	color: 	#008CBA;
+}
+
+
+div.impact-contents a:hover {
+
+background-color: 	#f1f1f1;
+
+}
+
+.notif-container {
+	position: relative	;
+
+	float: right;
+
+	display: inline-block;
+
+
+}
+
+
+.notif-container img {
+		display: block;
+	color: white;
+	background-color: #333;
+	text-align: center;
+	padding: 15px 15px;
+	text-decoration: none;
+	cursor: pointer;
+	height: 25px;
+		padding: 10px;
+
+	float: left;
+}
+
+.notif-contents {
+	display: none;
+	position: absolute;
+	background-color: #f9f9f9;
+	width: 300px;
+
+	box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.2);
+	z-index: 1000;
+	float: left;
+
+	top: 45px;
+	right: 0;
+	color: black;
+
+	text-decoration: none;
+		float: 	left;
+	text-align: left;
+	border-radius: 	4px;
+	overflow: auto;
+	height: 200px;
+
+
+}
+
+.notif-contents.show {
+display: block;
+}
+
+
+
+div.notif-contents h2 {
+background-color: 	#f1f1f1;
+font-size: 	17px;
+padding: 	5px;
+display: 	block;	
+padding-left: 28px;
+margin: 	0;
+}
+
+div.notif-contents h3 {
+
+font-size: 	14px;
+padding: 	5px;
+padding-top: 	10px;
+padding-bottom: 	10px;
+display: 	block;	
+padding-left: 10px;
+margin: 	3px 3px 0 0 ;
+cursor: pointer;
+}
+
+
+div.notif-contents h3:hover {
+
+background-color: 	#f1f1f1;
+
+}
+
+
+/* Dropdown */
+
+.dropbtn {
+	display: block;
+	color: white;
+	background-color: #333;
+	text-align: center;
+	padding: 10px 15px;
+	padding-right: 20px;
+	text-decoration: none;
+	cursor: pointer;
+	height: 25px;
+}
+
+
+
+.dropdown {
+	position: relative;
+	float: right;
+
+	display: inline-block;
+}
+
+
+.dropdown-content { 
+	display: none;
+	position: absolute;
+	background-color: #f9f9f9;
+	width: 120px;
+
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+	float: left;
+
+	right: 0;
+}
+
+.dropdown-content a {
+	color: black;
+	  padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+	text-align: left;
+}
+
+
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Change the li color on hover */
+
+
+ul.topnav li a:hover:not(.active), .topnav>a>img:hover, .dropdown:hover .dropbtn, .impact-container>img:hover, .notif-container>img:hover {
+	background-color: #555;
+}
+
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+
+
+/*Chg color of active page */
+ul.topnav .active {
+	background-color: #39D2FF;
+	color: white;
+}
+
+
+
+
+
+.addurl {
+	background-color: #008CBA;
+    border: none;
+    color: white;
+    padding: 7px 8px;
+    margin: 5px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    vertical-align: center;
+    float: right;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: normal;
+    opacity: 0.8;
+   }
+
+.addurl:hover {
+	opacity: 1;
+}
+
+
+/* Make it responsive
+@media screen and (max-width:600px){
+	ul.topnav li.right,
+	ul.topnav li {float: none;}
+	ul.topnav li.dropdown {float: none;}
+}
+
+ */
+
+
+
+
+
+/*Filter Panel*/
+
+
+.filterhouse, .filterpanel, .filteropen {
+
+    display: inline-flex;
+    flex-direction: column;
+    float: left;
+padding-top: 1em;
+	width: 250px;
+	height: 100% !important;
+
+	left: 0;
+
+	border-right: 1px solid #efefef;
+	padding-bottom: 5em;
+
+position: fixed;
+display: none;
+
+}
+
+
+.filterhouse {
+
+position: relative;
+margin-right: 25px;
+	z-index: 1;
+}
+
+
+.filterpanel {
+	overflow-y: auto;
+
+		background: #fff;
+		padding: 20px;
+}
+
+.filterpanel h1 {
+	font-size: 18px;
+	z-index: 10;
+	margin-top: 0;
+	padding-top: 0;
+}
+
+
+
+
+.filtertoggle {
+	width: 40px;
+	height: 60px;
+	background: #fff;
+margin-top: 160px;
+position: fixed; 
+
+border-top-right-radius: 5px;
+border-bottom-right-radius: 5px;
+margin-left: 0px;
+box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.2); 
+/*border-top: 1px solid #fdfdfd;
+border-right: 1px solid #fcfcfc;
+border-bottom: 1px solid #fdfdfd;*/
+line-height: 	40px;
+text-align:	center;
+
+vertical-align: 	center;
+cursor: 	pointer;	
+z-index: 1;
+
+
+}
+
+.open {
+	
+	left: 290px;
+z-index: 1;
+
+}
+
+/* Main Feed layout	*/
+
+
+.filter_toggle_btn {
+		
+
+}
+
+.category-selection {
+border-bottom: 1px solid #eee;
+
+
+
+}
+
+
+.topic-selection {
+
+	width: 90%;
+}
+
+.category-selection h2, .topic-selection h2{
+	font-size: 16px;
+	margin: 10px 5px 10px 0px;
+
+	padding: 0;
+	display: inline-block;
+
+}
+
+.category-selection h3 {
+	font-size: 12px;
+	color: #2196F3;
+	cursor: pointer;
+	opacity: 0.7;
+	display: inline-block;
+	margin-top: 0;
+	margin-bottom: 8px;
+}
+
+.category-selection h3:hover,.topic-selection>ul>li:hover { 
+	opacity: 1;
+ }
+
+.cat-list-container {
+	  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  line-height: 25px;
+  vertical-align: middle;
+
+}
+
+.cat-list-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+
+}
+
+
+/* Create a custom checkbox */
+.cat-checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.cat-list-container:hover input ~ .cat-checkmark {
+  background-color: #ccc;
+}
+
+
+/* When the checkbox is checked, add a blue background */
+.cat-list-container input:checked ~ .cat-checkmark {
+  background-color: #2196F3;
+}
+
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.cat-checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+
+/* Style the checkmark/indicator */
+.cat-list-container .cat-checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+
+.topic-selection>ul {
+	list-style: none;
+	margin-left: 25px;
+	padding-left: 0;
+
+}
+
+.topic-selection>ul>li{
+	font-size: 14px;
+	font-weight: bold;
+	color: #2196F3;
+	cursor: pointer;
+	opacity: 0.7;
+	display: block;
+	margin-top: 0;
+	margin-bottom: 8px;
+	margin-left: 0;
+	padding-left: 0;
+
+
+}
+
+.input {
+    background-color: #E4E4E4;
+    border:none;
+    font-weight: normal;
+    font-size: 14px;
+    padding:5px;
+    margin: 0px;
+    margin-top: 5px;	
+    display: inline-block;
+    float: left; 
+    width: 111%;		
+
+}
+
+#search-box {
+	
+    border-radius: 4px;		
+    }
+
+
+
+.content_view-nav{
+	margin: 20px 10px 1px 15px;
+	display: block;
+	position: relative;
+	width: 100%;
+
+}
+
+
+
+.button-left {
+	background-color: #008CBA;
+    border: none;
+    color: white;
+    padding: 7px 13px;
+    margin: 5px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    vertical-align: center;
+    float: left;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: normal;
+    opacity: 0.8;
+   }
+
+.button-left:hover {
+	opacity: 1;
+}
+
+.content_view {
+	margin: 0;
+	margin-top: 0px;
+	position: relative;
+display: flex;
+width: auto;
+    flex-direction: column;
+padding: 7px;
+z-index: 0;
+
+}
+
+
+.nav-flex-container {
+
+	display: inline-flex;
+	align-items: center;
+	height: 200px;
+	width: 	50px;
+}
+
+
+
+.nav_arrow-left{ 
+
+
+margin-top: 	0px;
+margin-right: -50px;
+display: 	inline-block;	
+width: 40px;
+height: 40px;
+border-radius: 25px;
+background-color: white;
+box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.2); 
+line-height: 	40px;
+text-align:	center;
+float:  left;
+vertical-align: 	center;
+cursor: 	pointer;	
+left:0px;
+position: relative;
+
+ }
+
+
+
+.nav_arrow-right{ 
+	margin-top: 	0px;
+	margin-left: -35px;
+	display: inline	;	
+
+	width: 40px;
+	height: 40px;
+	border-radius: 25px;
+	background-color: white;
+	box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.2); 
+	line-height: 	40px;
+	text-align:	center;
+	float: 	right;
+	vertical-align: 	center;
+	cursor: 	pointer;	
+	margin-right: 20px;
+ }
+
+
+
+.mainfeed_container, .category_container {
+	border: none;
+	padding: 0 10px;
+	width: 100%;
+	height: auto;
+	margin-left: 30px;
+	padding-bottom: 15px;
+	display: block;
+	overflow-x: visible;
+	transition: 0.5s;
+	
+}
+
+.category_container {
+	border-bottom: 1px solid lightgrey;
+}
+
+
+.cb_layout-header {
+	display: inline-block;
+	width: 80%;
+	margin-right: 15px;
+	margin-left: 0px;	
+		text-align: center;	
+
+}
+
+.cb_layout-header>h2 {
+	display: inline-block;
+
+	text-align: center;	
+}
+
+.cb_layout-header>p {
+	display: inline-block;
+	margin-left: 20px;
+	text-align: center;	
+}
+
+
+
+
+
+
+select.selector {
+
+    width: 170px;
+    padding: 6px 6px;
+    margin-left: 5px;
+    border: none;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+    display: inline-block;
+}
+
+
+
+.cb_container {
+	display: inline-block;
+	width: 270px;
+	border-right: 0px solid;
+	border-color: lightgrey;
+	padding-right: 20px;
+	
+
+	height: auto;
+
+	text-align: center;
+	transition: 0.5s;
+
+}
+
+.cb_container-expand {
+
+	width: 400px;
+
+	margin: auto;
+		margin-top: 60px;
+	border-right: 0px solid;
+	border-color: lightgrey;
+	padding-right: 20px;
+
+
+	text-align: center;
+	transition: 0.5s;
+
+} 
+
+.modal {
+
+    display: block; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 100; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgb(0,0,0); /* Fallback color */
+	background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+	overflow-y: auto;
+}
+
+
+/* The Close Button */
+.close {
+	margin: 20px;
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+/*
+
+.content_column {
+	display: block;
+	width: 100%;
+	float: left;
+	border-right: 0px solid;
+	border-color: lightgrey;
+	padding: 0px 0px;
+	max-height: 700px;
+	overflow: hidden;
+
+	opacity: 0.7; 
+}
+
+.content_column:hover {
+
+	opacity: 1;
+	overflow-y: auto;	
+
+}*/
+
+
+
+
+/* CB */
+
+
+.cb_layout {
+
+	clear: none;
+	float: left;
+
+	border-radius: 5px; 
+
+	padding-bottom: 0px;
+	margin: 10px;
+	
+
+	width: 100%;
+	/*opacity: 0.7; */
+	background-color: white;
+	display: block;
+	position: 	relative;	
+
+	transition: 0.1s;
+
+}
+
+
+.cb_layout:hover {
+
+box-shadow: 2px 3px 3px 0px rgba(0,0,0,0.2); 
+opacity: 1;
+}
+
+
+.cb_layout-expand {
+	clear: none;
+	float: left;
+
+	border-radius: 10px; 
+
+	padding-bottom: 5px;
+	margin: 10px;
+
+	width: 100%;
+	/*opacity: 0.7; */
+	background-color: white;
+	display: block;
+	position: 	relative;
+	transition: 0.5s;
+
+}
+
+
+
+.cb_top {
+	height: 15px;
+	width: 100%;	
+	display: block;
+	padding: 0px 3px;
+	margin-bottom: 0px;
+
+
+}
+
+
+.cb_tag {
+border-radius: 3px;
+height: 100%;
+margin: 5px 3px;
+line-height: 	16px;
+vertical-align: 	middle;	
+background-color: #f7f7f7;;
+display: inline-block;
+float: left;
+cursor: pointer;
+padding: 3px 7px;
+font-family: arial;
+font-weight: bold; 
+/*font-style: italic;*/
+font-size: 12px;
+
+
+
+
+}
+
+div.cb_tag>p {
+font-size: 9px;
+margin: 0; 
+color: 	#666;
+}
+
+div.cb_tag:hover {
+background-color: #DCE1E5;
+color: 	
+
+}
+
+
+
+.more {
+  /*content: '\2807';*/
+	display: inline-block;
+	  float: right;
+  height: 90%;
+  width: 12px;
+  margin-top: 8px;
+  margin-right: 10px;
+  margin-left: 0px;
+  padding: 0px;
+  opacity: .7;
+
+  }
+
+
+div.more>img {
+	display: inline-block;
+    float: right;
+	width:30%;
+	height:100%;
+	object-fit: cover;
+}
+
+
+.imagePlusInfo {
+
+	height: 320px;
+}
+
+
+.imagePlusInfo-expand {
+
+	height: 350px;
+}
+
+
+
+.image_container {
+	height: 135px;
+	width: 100%;	
+		margin-bottom: 	5px;
+	display: block;
+
+}
+
+.image_container-expand {
+	height: 200px;
+	width: 100%;	
+	margin-bottom: 	0px;
+	display: block;
+
+}
+
+div.image_container>img {
+
+	/*margin-top: 10px;
+
+	margin-left: 5px; */
+	object-fit: cover; /*KEY to having image fit in parent div without stretching (centered)*/ 
+	margin-right: 0;
+	margin-bottom: 0px;
+	max-height: 100%;
+	width: 100%;
+	padding: 0;
+	/*float: left;
+	display: inline;*/
+
+}
+
+div.image_container-expand>img {
+
+	/*margin-top: 10px;
+
+	margin-left: 5px; */
+	object-fit: cover; /*KEY to having image fit in parent div without stretching (centered)*/ 
+	margin-right: 0;
+	margin-bottom: 6px;
+	max-height: 100%;
+	width: 100%;
+	padding: 0;
+	/*float: left;
+	display: inline;*/
+
+}
+
+
+
+/* Headline */
+
+.info {
+
+display: block;
+margin-right: 15px;
+margin-left: 15px;
+
+margin-bottom: 13px;
+}
+
+
+.info-expand {
+
+display: block;
+margin-right: 15px;
+margin-left: 15px;
+margin-bottom: 5px;
+}
+
+/* Source/Publishtime *//* Source/Publishtime */
+.sourceAndDate  {
+
+font-size: 10px;
+font-family: Open Sans;
+
+padding-bottom: 3px;
+font-weight: normal;
+margin-top: 18px;
+margin-bottom: 0px;
+font-weight: lighter;
+opacity: 0.7;
+margin-right: 	5px;
+
+float: left;
+
+}
+
+.info-expand>h2  {
+
+font-size: 16px;
+font-family: Open Sans;
+
+padding-bottom: 3px;
+font-weight: normal;
+margin-top: 18px;
+margin-bottom: 0px;
+font-weight: lighter;
+opacity: 0.7;
+margin-right: 	5px;
+
+float: left;
+
+}
+
+.outlink {
+	display: inline-block;
+	float: right;
+	vertical-align: top;
+	margin: 0;
+	opacity: 0.7
+	cursor:pointer;
+}
+
+.outlink:hover {	opacity: 1;}
+
+
+div.outlink>img {
+	height: 15px;
+	width: 15px;
+	object-fit: contain;
+
+}
+
+
+/* Headline */
+.headline {
+font-size: 16px;
+font-family: Open Sans;
+margin-top: 3px;
+margin-bottom: 5px;
+padding: 0px 0px;
+font-weight: 600;
+display: inline-block;
+text-align: left;
+width: 	100%;
+}
+
+.headline:hover, .description:hover{
+color: 	#2b6dad;
+
+}
+
+.headline-expand {
+font-size:18px;
+font-family: Open Sans;
+margin-top: 3px;
+margin-bottom: 4px;
+padding: 0px 0px;
+font-weight: 600;
+display: inline-block;
+text-align: left;
+width: 	100%;
+}
+
+.headline-expand:hover {
+color: 	#2b6dad;
+
+}
+
+
+
+/* Description */
+.description {
+	display: 	inline-block	;
+font-size: 12px;
+font-family: Open Sans;
+margin-top: 0;
+margin-bottom: 0px;
+
+
+font-weight: normal;
+text-align: left;
+transition: 0.5s;
+
+}
+
+.description.show {
+display: inline-block; }
+
+
+
+/* Shared by */
+
+
+.sharedby_user {
+	position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+    height: 25px;
+    float: left;
+    margin: 3px 5px;
+    cursor: pointer;
+}
+
+.sharedby_user>img {
+
+	height: 25px;
+}
+
+
+
+.sharedby_myself {
+	position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+    height: 25px;
+    float: right;
+    margin: 3px 5px;
+    cursor: pointer;
+}
+
+.sharedby_myself>img {
+
+	height: 25px;
+}
+
+
+
+.sharedby_text {
+border-radius: 5px;
+background-color: #DCE1E5;
+width: 60%;
+font-size: 10px;
+font-family: Arial;
+margin: 0px 0px;
+margin-bottom: 	10px;
+margin-top: 0px;
+padding: 0px 7px;
+font-weight: bold;
+display: inline-block;
+text-align: left;
+cursor: pointer;
+}
+
+
+.sharedby_user .sharedby_text {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -10px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.sharedby_user .sharedby_text::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    margin-left: 10px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.sharedby_user:hover .sharedby_text {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* CB Buttons */
+
+/* Share dropdown menu */
+
+
+.cat_label_container {
+	border-radius: 5px;
+background-color: #DCE1E5;
+
+font-family: Open Sans;
+margin: 0px 0px;
+margin-bottom: 	0px;
+margin-top: 15px;
+padding: 3px 7px;
+font-family: arial;
+	font-weight: bold; 
+	/*font-style: italic;*/
+	font-size: 12px;
+	display: inline-block;
+	float: right;
+
+}
+
+
+.cb_button-layer { 
+
+height: 30px;
+width: 100%;
+margin-top: 0px;
+
+z-index: 0;
+text-align: center;
+
+	display: inline-block
+float: none;
+padding-top: 0px;
+border-top: 1px solid;
+
+border-bottom: 0px solid;
+border-color: #DCE1E5;
+
+
+vertical-align: bottom;
+}
+
+.cb_button-layer-expand { 
+
+height: 30px;
+width: 100%;
+margin-top: 0px;
+
+z-index: 0;
+text-align: center;
+
+	display: inline-block
+float: none;
+padding-top: 0px;
+border-top: 1px solid;
+
+border-bottom: 0px solid lightgrey;
+border-color: #DCE1E5;
+
+
+vertical-align: bottom;
+}
+
+
+.cb_button-layer.show {
+
+	display: inline-block
+
+}
+
+.upbtn {
+
+	display: block;	
+	float: left;
+
+	height: 18px;
+	opacity: 1;
+	cursor: pointer;
+	padding: 4px 5px;
+	margin: 0;
+
+
+}
+
+.downbtn {
+
+	display: block;	
+	float: left;
+	height: 18px;
+	opacity: 1;
+	cursor: pointer;
+	padding: 4px 5px;
+	margin: 0;
+
+}
+
+
+/* The container <div> - needed to position the dropdown content */
+
+.menu_container {
+
+	display: inline-block;	
+	float: left;
+	left: 0;
+
+}
+
+
+/* Dropdown Content (Hidden by Default) */
+.menu-content, .menu-content-DOWN {
+	border-radius: 	5px;
+	display: none;
+	margin: 5px 0;
+	padding: 5px 0;	
+
+	background-color: #fff;
+	min-width: 	100px;
+	box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.2); 
+	opacity: 1;
+	position: fixed; 
+	z-index:99 ; 
+	position: absolute;
+}
+
+.menu-content-DOWN {
+margin-left: 25px;
+}
+
+
+
+.menu-content a, .menu-content-DOWN a { 
+color: black;
+padding: 5px 5px;
+text-decoration: none;
+display: block;
+font-family: Open Sans;
+font-size: 	12px;
+font-weight: normal;
+
+}
+
+
+.commentbutton {
+	display: inline-block;	
+	float: right;
+
+	height: 80%;
+	opacity: 1;
+	cursor: pointer;
+	padding: 2px 5px;
+	padding-bottom: 3px;
+	margin: 0;
+
+}
+
+.commentbutton-expand {
+	display: inline-block;	
+	float: right;
+
+	height: 80%;
+	opacity: 1;
+	cursor: pointer;
+	padding: 2px 5px;
+	padding-bottom: 3px;
+	margin: 0;
+
+}
+
+
+.buttonContain{
+display: 	block;
+float: 	right;
+width: 30px;
+max-height: 100px;
+	opacity: 1;
+	cursor: pointer;
+	padding: 0px 5px;
+	padding-bottom: 0px;
+	margin: 0;
+	z-index: 9;
+
+}
+
+.buttonContain>img {
+height: 100%;
+}
+
+/* Dropdown button on hover & focus */
+.buttonContain:hover, .buttonContain:focus {
+	background-color: #f7f7f7;
+	opacity: 1;
+	z-index: 	1;
+
+}
+
+#commentBtnContain {
+	border-right: 0px lightgrey solid ;
+
+}
+
+
+/* The container <div> - needed to position the dropdown content */
+
+.share_container {
+
+	display: inline-block; 
+	float: right;
+	height: 	100%;
+	margin: 0;
+
+	z-index: 1500;
+
+
+}
+
+
+/* Dropdown Content (Hidden by Default) */
+.sharedown-content, .shareUser-content {
+	border-radius: 	5px;
+	display: none;
+		margin: 5px 0;
+		padding: 5px 0;	
+
+	background-color: #fff;
+	min-width: 	100px;
+	box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.2); 
+	opacity: 1;
+	position: absolute	;
+	left: 	100px;
+	z-index:1000 ; /* place dropdown infront of everything else*/
+}
+
+
+.shareUser-content {
+	box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.2); 
+	position: absolute	;	
+	left: 	-200px;
+}
+
+
+
+.selector {
+
+	width: 100px;
+}
+
+.sharedown-content span { 
+color: black;
+padding: 5px 5px;
+text-decoration: none;
+display: block;
+font-family: Open Sans;
+font-size: 	12px;
+font-weight: normal;
+cursor: pointer;
+
+
+}
+
+
+
+
+.triangle-with-shadow {
+width: 100px;
+height: 100px;
+position: absolute;
+top: -100px;
+overflow: hidden;
+z-index: 	0;
+/*box-shadow: 0 16px 10px -17px rgba(0,0,0,0.5);*/
+}
+
+.triangle-with-shadow:after {
+content: "";
+position: absolute;
+width: 8px;
+height: 8px;
+background: #fff;
+transform: rotate(45deg);
+top: 95px;
+left: 15px;
+border: 0px solid grey;
+box-shadow: -1px -1px 0px -2px rgba(0,0,0,0.5);
+z-index: 	0;
+}
+
+.triangle-with-shadow:after {
+box-shadow: none;
+}
+
+
+
+
+.sharedown-content span:hover, .menu-content span:hover  {background-color: #ddd}
+
+
+
+#myInput {
+    background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+    background-position: 10px 12px; /* Position the search icon */
+    background-repeat: no-repeat; /* Do not repeat the icon image */
+    width: 100%; /* Full-width */
+    font-size: 12px; /* Increase font-size */
+    padding: 6px 10px 6px 10px; /* Add some padding */
+    border: 1px solid #ddd; /* Add a grey border */
+    margin-bottom: 6px; /* Add some space below the input */
+}
+
+#shareUserUL {
+    /* Remove default list styling */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    height: 80px;
+    overflow: auto;
+}
+
+#shareUserUL li a {
+    border: 1px solid #ddd; /* Add a border to all links */
+    margin-top: -1px; /* Prevent double borders */
+    background-color: #f6f6f6; /* Grey background color */
+    padding: 3px; /* Add some padding */
+    text-decoration: none; /* Remove default text underline */
+    font-size: 10px; /* Increase the font-size */
+    color: black; /* Add a black text color */
+    display: block; /* Make it into a block element to fill the whole list */
+}
+
+#shareUserUL li a:hover:not(.header) {
+    background-color: #eee; /* Add a hover effect to all links, except for headers */
+}
+
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-
+content container when the user clicks on the dropdown button) 	*/
+
+
+.sharedown-content.show {
+
+
+		float: right;
+	display: inline-block;	
+	opacity: 1;
+		left: 250px;
+	z-index: 	1;
+
+	
+}	
+
+
+.shareUser-content.show {
+	float: right;
+	display: inline-block;	
+	opacity: 1;
+		left: 0px;
+	z-index: 	1;
+
+}
+
+.menu-content.show {
+	position: absolute	;
+		float: right;
+	display: block;
+	opacity: 1;
+
+	z-index: 	1;
+	left: 	0;
+	top: 26px;
+
+}
+
+.menu-content-DOWN.show {
+	position: absolute	;
+		float: right;
+	display: block;
+	opacity: 1;
+
+	z-index: 	1;
+	left: 	0;
+	top: 26px;
+
+}		
+
+
+
+
+
+.shareComm {
+	display: none;
+}
+
+.shareComm.show {
+	display: block;
+}
+
+
+/*Comments expand*/
+
+.rxn_bar {
+display: 	none;	
+height: 50px;
+width: 100%;
+background-color: yellow;
+margin-top: 0px;
+
+
+}
+
+
+
+.comments_container {
+	display: block;	
+	background-color: #DCE1E5;
+	position: absolute;
+	overflow: auto;
+	z-index: 2;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+
+}
+
+
+.comments_container.show {
+	display: block;	
+
+
+}
+
+.comment {
+border-radius: 0px;
+background-color: white;
+font-size: 8px;
+font-family: Open Sans;
+margin: 0px 0px;
+margin-left: 0px;
+padding: 3px 7px;
+width:  95%;
+display: inline-block;
+text-align: left;
+float: left;
+}
+
+div.comment>h6 {
+
+display: inline-block;
+float: right;
+font-size: 	10px;
+font-weight: 	bold;
+line-height: 	14px;
+vertical-align: 	middle;	
+margin: 	0;
+padding: 	0;
+
+}
+
+div.comment>img {
+	height: 	20px;
+}
+
+div.comment>span {
+	display: 	inline-block;
+	position: 	relative;	
+	bottom: 5px;
+	margin-left: 	5px
+}
+
+
+.comment-reply {
+border-radius: 0px;
+background-color: white;
+font-size: 8px;
+font-family: Open Sans;
+margin: 0px 0px;
+margin-left: 0px;
+padding: 3px 7px;
+border-left: 5px solid darkgrey	;
+width:  95%;
+display: inline-block;
+text-align: left;
+float: left;
+
+}
+
+
+.comment-reply-input {
+display: none;
+border-radius: 5px;
+border: 0px solid #008CBA;
+
+background-color: #f7f7f7;
+font-size: 8px;
+font-family: Open Sans;
+margin: 4px 6px;
+margin-left: 10px;
+padding: 3px 7px;
+width: 	70%;
+display: none;
+text-align: left;
+
+}
+
+.comment-reply-input.show {
+
+display: inline-block;
+
+
+}
+
+
+div.comment-reply-input>img {
+	height: 	20px;
+}
+
+
+div.comment-reply-input>span {
+	display: 	inline-block;
+	position: 	relative;	
+	bottom: 5px;
+	margin-left: 	5px
+}
+
+
+
+div.comment-reply>img {
+	height: 	20px;
+}
+
+div.comment-reply>span {
+	display: 	inline-block;
+	position: 	relative;	
+	bottom: 5px;
+	margin-left: 	5px
+}
+
+
+.comment-input{
+	display: block;
+   background-color: white;
+    border: 1px solid	lightgrey	;
+    font-weight: normal;
+    font-size: 14px;
+
+    margin: 8px 0px;
+
+    margin-left: 0px;
+    
+		
+    border-radius: 4px;	
+    min-height: 22px;
+
+
+
+  width:90%;
+
+  resize:none;
+  overflow:hidden;
+
+  height:30px;
+  padding:3px;
+
+    }
+
+    .flex_container {
+    	display: 	flex;
+    	justify-content: 	center;	
+    	width: 	100%;
+    }
+
+
+    .newShare {
+
+    	min-width: 300px;
+    }
+
+
+
+.comment-response-input{
+	display: block;
+   background-color: white;
+    border: 1px solid	lightgrey	;
+    font-weight: normal;
+    font-size: 14px;
+    padding:5px;
+    margin: 5px 5px 5px 5px;
+    float: left; 
+    width: 90%;		
+    border-radius: 4px;	
+
+    }
+
+.react-respond-comment {
+		display: 	block;
+		margin: 8px 0px;
+
+}
+
+
+
+
+
+.react-respond-comment.show {
+	display: block;
+}
+
+.show {
+display: block;
+
+}
+
+.updownvote {
+		display: 	inline-block;
+		margin: 	0 4px;
+		float: 	left;	
+		font-size: 	12;
+		font-family: 	helvetica;
+		color: 	darkgrey;
+		cursor: pointer;	
+
+}
+
+.respond {
+		display: 	inline-block;
+		margin: 	0 4px;
+		float: 	right;	
+		font-size: 	12;
+		font-family: 	helvetica;
+		color: 	darkgrey;
+		cursor: pointer;	
+
+}
+
+.updownvote:hover  {
+	color: 	black;
+}
+
+.respond:hover  {
+	color: 	black;
+}
+
+ .existing_comments_container {
+
+ 	display: block;	
+
+ 	width: 	100%;
+
+ }
+
+
+
+.postComment_container, .newCommentContainer{ 
+ display: block	;
+ margin-left: 	0px;
+ position: 	relative;	
+
+
+ }
+
+.newshare-fromURL {
+margin-left: 	15px;
+margin-top: 	3px;
+width: 100%;
+
+}
+
+.newshare-fromURL-commentType {
+float:left;
+margin-left: 	29px;
+width: 100%;
+margin-top: 	3px;
+
+
+}
+
+
+.postComment_container>p { 
+ display: inline-block;
+ float: right;
+ line-height: 24px;
+ vertical-align: middle;
+
+
+
+ }
+
+
+.postComment_container>select { 
+ display: inline-block;
+ float: right;
+
+ }
+
+ .postComment_container>button { 
+ display: inline-block;
+ float: right;
+ margin-top: 0;
+ margin-bottom: 8px;
+
+ vertical-align: middle;
+
+ }
+
+
+.reshare_container {
+	display: block;
+	padding: 8px;
+	border-top: 	3px solid #e7ecf1;
+}
+
+.reshare_container>h4 {
+margin: 0 0;
+font-size: 12px;
+display: inline-block;	
+float: 	left;
+
+}
+
+
+.shareTo-AddURLMenu-div>h4 {
+	line-height: 24px;
+	vertical-align: middle;	
+}
+
+.radioSection>h4 {
+	display: block;
+	float: left;
+	width: 70%;
+	margin: 	8px 0px;
+
+}
+
+.radioSection>label {
+	display: block;
+	float: left;
+	width: 100%;
+}
+
+.sharetoUsersection{ 
+width: 100%;
+ }
+
+.border_container { 
+	width: 100%;
+	padding-top: 10px;
+ border-top: 1px solid lightgrey ; }
+
+
+
+.reshare {
+
+margin-right: 	20px;
+margin-bottom: 	40px;
+
+	 }
+
+.newShare {
+
+	max-width: 90px;
+	margin-left: 0;
+	display: block;
+}

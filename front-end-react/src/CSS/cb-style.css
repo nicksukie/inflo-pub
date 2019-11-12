@@ -1,0 +1,518 @@
+
+
+.cb_container {
+  display: inline-block;
+  width: 270px;
+  border-right: 0px solid;
+  border-color: lightgrey;
+  padding-right: 20px;
+
+  height: 430px;
+
+  text-align: center;
+  transition: 0.5s;
+
+}
+
+.cb_container-expand {
+  width: 400px;
+
+  margin: auto;
+  margin-top: 60px;
+  border-right: 0px solid;
+  border-color: lightgrey;
+  padding-right: 20px;
+
+  text-align: center;
+  transition: 0.5s;
+}
+
+
+
+
+.cb_layout {
+  clear: none;
+  float: left;
+
+  border-radius: 5px;
+
+  padding-bottom: 0px;
+  margin: 10px;
+
+  width: 100%;
+  /*opacity: 0.7; */
+  background-color: white;
+  display: block;
+  position: relative;
+
+  transition: 0.1s;
+
+    border: 1px solid lightgrey;
+}
+
+.cb_layout:hover {
+  background-color: #f2f5f9;
+  opacity: 1;
+
+}
+
+.cb_layout-expand {
+  clear: none;
+  float: left;
+
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  padding-bottom: 5px;
+  margin: 10px;
+
+  width: 100%;
+  /*opacity: 0.7; */
+  background-color: white;
+  display: block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.cb_top {
+  height: 15px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 3px;
+  margin-bottom: 7px;
+}
+
+.cb_tag {
+  border-radius: 3px;
+  height: 100%;
+  margin: 0px 3px;
+  line-height: 16px;
+  vertical-align: middle;
+  background-color: none;
+  display: inline-block;
+  float: left;
+  cursor: pointer;
+  padding: 3px 7px;
+  font-family: arial;
+  font-weight: none;
+  /*font-style: italic;*/
+  font-size: 12px;
+  border: 1px solid lightgrey
+}
+
+div.cb_tag > p {
+  font-size: 9px;
+  margin: 0;
+  color: #666;
+}
+
+div.cb_tag:hover {
+  background-color: #dce1e5;
+  color: ;
+}
+
+.more {
+  /*content: '\2807';*/
+display: flex;
+display: none;
+  height: 95%;
+margin-right: 8px;
+margin-bottom: 5px;
+margin-top: 0;
+  padding: 5px 0px 5px 0px;
+  opacity: 0.7;
+  cursor: pointer;
+  border-radius: 15px;
+  text-align: center;
+  justify-content: center;
+
+}
+
+.more:hover {
+    background-color: #dce1e5; 
+}
+
+div.more > img {
+  display: inline-block;
+  float: right;
+  width: 30%;
+
+  object-fit: cover;
+}
+
+.imagePlusInfo {
+  height: 280px;
+  padding-bottom: 15px;
+  cursor: pointer;
+}
+
+.imagePlusInfo-expand {
+  height: 330px;
+}
+
+.image_container {
+  height: 135px;
+  width: 100%;
+  margin-bottom: 0px;
+  display: block;
+}
+
+.image_container-expand {
+  height: 200px;
+  width: 100%;
+  margin-bottom: 0px;
+  display: block;
+}
+
+div.image_container > img {
+  /*margin-top: 10px;
+
+	margin-left: 5px; */
+  object-fit: cover; /*KEY to having image fit in parent div without stretching (centered)*/
+  margin-right: 0;
+  margin-bottom: 0px;
+  max-height: 100%;
+  width: 100%;
+  padding: 0;
+  /*float: left;
+	display: inline;*/
+}
+
+div.image_container-expand > img {
+  /*margin-top: 10px;
+
+	margin-left: 5px; */
+  object-fit: cover; /*KEY to having image fit in parent div without stretching (centered)*/
+  margin-right: 0;
+  margin-bottom: 6px;
+  max-height: 100%;
+  width: 100%;
+  padding: 0;
+  /*float: left;
+	display: inline;*/
+}
+
+/* Headline */
+
+.info {
+  display: block;
+ padding: 0px 15px;
+height: 100%;
+
+}
+
+.info-expand {
+  display: block;
+margin: 0px 0px;
+  padding: 10px 13px;
+  width: auto;
+   height: 100%;
+
+}
+
+/* Source/Publishtime */ /* Source/Publishtime */
+.sourceAndDate {
+  font-size: 10px;
+  font-family: Open Sans;
+
+  padding-bottom: 3px;
+  font-weight: normal;
+  margin-top: 8px;
+  margin-bottom: 0px;
+  font-weight: lighter;
+  opacity: 0.7;
+  margin-right: 5px;
+
+  float: left;
+}
+
+.info-expand > h2 {
+  font-size: 12px;
+  font-family: Open Sans;
+
+  padding-bottom: 3px;
+  font-weight: normal;
+  padding-right: 4px;
+  font-weight: lighter;
+  opacity: 0.7;
+  margin: 0;
+
+  float: left;
+}
+
+.outlink {
+  display: inline-block;
+  float: right;
+  vertical-align: top;
+  margin: 0;
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.outlink:hover {
+  opacity: 1;
+}
+
+div.outlink > img {
+  height: 15px;
+  width: 15px;
+  object-fit: contain;
+}
+
+/* Headline */
+.headline {
+  font-size: 16px;
+  font-family: Open Sans;
+  margin-top: 3px;
+  margin-bottom: 5px;
+  padding: 0px 0px;
+  font-weight: 600;
+  display: inline-block;
+  text-align: left;
+  width: 100%;
+}
+
+.headline:hover,
+.description:hover {
+ /* color: #2b6dad; */
+}
+
+.headline-expand {
+  font-size: 18px;
+  font-family: Open Sans;
+  margin-top: 3px;
+  margin-bottom: 4px;
+  padding: 0px 0px;
+  font-weight: 600;
+  display: inline-block;
+  text-align: left;
+  width: 100%;
+}
+
+.headline-expand:hover {
+  /* color: #2b6dad;*/
+}
+
+/* Description */
+.description {
+  display: inline-block;
+  font-size: 12px;
+  font-family: Open Sans;
+  margin-top: 0;
+  margin-bottom: 0px;
+
+  font-weight: normal;
+  text-align: left;
+  transition: 0.5s;
+}
+
+.description.show {
+  display: inline-block;
+}
+
+/* Shared by */
+
+.sharedby_user {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+  height: 25px;
+  float: left;
+  margin: 3px 5px;
+  cursor: pointer;
+}
+
+.sharedby_user > img {
+  height: 25px;
+}
+
+.sharedby_myself {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+  height: 25px;
+  float: right;
+  margin: 3px 5px;
+  cursor: pointer;
+}
+
+.sharedby_myself > img {
+  height: 25px;
+}
+
+.sharedby_text {
+  border-radius: 5px;
+  background-color: #dce1e5;
+  width: 60%;
+  font-size: 10px;
+  font-family: Arial;
+  margin: 0px 0px;
+  margin-bottom: 10px;
+  margin-top: 0px;
+  padding: 0px 7px;
+  font-weight: bold;
+  display: inline-block;
+  text-align: left;
+  cursor: pointer;
+}
+
+.sharedby_user .sharedby_text {
+  visibility: hidden;
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -10px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.sharedby_user .sharedby_text::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0%;
+  margin-left: 10px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.sharedby_user:hover .sharedby_text {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* CB Buttons */
+
+/* Share dropdown menu */
+
+.cat_label_container {
+  border-radius: 5px;
+  background-color: #dce1e5;
+
+  font-family: Open Sans;
+  margin: 0px 0px;
+  margin-bottom: 0px;
+  margin-top: 15px;
+  padding: 3px 7px;
+  font-family: arial;
+  font-weight: bold;
+  /*font-style: italic;*/
+  font-size: 12px;
+  display: inline-block;
+  float: right;
+}
+
+.cb_button-layer {
+  height: 30px;
+  width: 100%;
+  margin-top: 0px;
+
+  z-index: 0;
+  text-align: center;
+
+  display: inline-block;
+  float: none;
+  padding-top: 0px;
+  border-top: 1px solid;
+
+  border-bottom: 0px solid;
+  border-color: #dce1e5;
+
+  vertical-align: bottom;
+}
+
+.cb_button-layer-expand {
+  height: 30px;
+  width: 100%;
+  margin-top: 0px;
+
+  z-index: 0;
+  text-align: center;
+
+  display: inline-block;
+  float: none;
+  padding-top: 0px;
+  border-top: 1px solid;
+
+  border-bottom: 0px solid lightgrey;
+  border-color: #dce1e5;
+
+  vertical-align: bottom;
+}
+
+.cb_button-layer.show {
+  display: inline-block;
+}
+
+
+
+.commentbutton {
+  display: inline-block;
+  float: right;
+
+  height: 80%;
+  opacity: 1;
+  cursor: pointer;
+  padding: 2px 5px;
+  padding-bottom: 3px;
+  margin: 0;
+}
+
+.commentbutton-expand {
+  display: inline-block;
+  float: right;
+
+  height: 80%;
+  opacity: 1;
+  cursor: pointer;
+  padding: 2px 5px;
+  padding-bottom: 3px;
+  margin: 0;
+}
+
+.buttonContain {
+  display: block;
+  float: right;
+  width: 30px;
+  max-height: 30px;
+  opacity: 1;
+  cursor: pointer;
+  padding: 0px 5px;
+  padding-bottom: 0px;
+  margin: 0;
+  z-index: 9;
+}
+
+.buttonContain > img {
+  max-height: 30px;
+}
+
+.buttonContain > a > img {
+  max-height: 30px;
+}
+
+/* Dropdown button on hover & focus */
+.buttonContain:hover,
+.buttonContain:focus {
+  background-color: #dce1e5;
+  opacity: 1;
+  z-index: 1;
+}
+
+#commentBtnContain {
+  border-right: 0px lightgrey solid;
+}
+
+
+.bottom_right_image {
+border-bottom-right-radius: 5px;
+
+}

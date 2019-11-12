@@ -1,0 +1,10 @@
+Django==2.1.2
+jwt==0.6.1
+PyMySQL==0.9.3
+pymysql==0.9.3
+django-cors-headers==2.4.0
+mysql-connector==2.1.7
+newspaper3k==0.2.8
+articleDateExtractor==0.20
+djangorestframework-jwt==1.11.0
+djangorestframework==3.9.4

@@ -1,0 +1,125 @@
+
+
+.commentSectionHeader {
+  display: flex;
+  align-items: center; 
+  justify-content: space-between;
+padding: 5px 8px 5px 8px;
+  border-top: 0px solid lightgrey;
+  border-bottom: 1px solid #d9dce0;
+
+}
+
+
+.comments_container {
+  display: block;
+  background-color: #f2f5f9;
+  position: absolute;
+  overflow: auto;
+  z-index: 2;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  width: 400px;
+}
+
+.comments_container.show {
+  display: block;
+}
+
+.flex_container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+
+.comment-response-input {
+  display: block;
+  background-color: white;
+  border: 1px solid lightgrey;
+  font-weight: normal;
+  font-size: 14px;
+  padding: 5px;
+  margin: 5px 5px 5px 5px;
+  float: left;
+  width: 90%;
+  border-radius: 4px;
+}
+
+.react-respond-comment {
+  display: block;
+  margin: 8px 0px;
+}
+
+.react-respond-comment.show {
+  display: block;
+}
+
+.show {
+  display: block;
+}
+
+.updownvote {
+  display: inline-block;
+  margin: 0 4px;
+  float: left;
+  font-size: 12;
+  font-family: helvetica;
+  color: darkgrey;
+  cursor: pointer;
+}
+
+.respond {
+  display: inline-block;
+  margin: 0 4px;
+  float: left;
+  font-size: 12;
+
+  color: darkgrey;
+  cursor: pointer;
+}
+
+.updownvote:hover {
+}
+
+.respond:hover {
+  color: grey;
+}
+
+.existing_comments_container {
+  display: block;
+
+  width: 100%;
+}
+
+.postComment_container,
+.newCommentContainer {
+  display: block;
+
+  position: relative;
+  margin: 0 0 8px 0;
+
+}
+
+
+
+.postComment_container > p {
+  display: inline-block;
+  float: right;
+  line-height: 24px;
+  vertical-align: middle;
+}
+
+.postComment_container > select {
+  display: inline-block;
+  float: right;
+}
+
+.postComment_container > button {
+  display: inline-block;
+  float: right;
+  margin-top: 0;
+  margin-bottom: 8px;
+
+  vertical-align: middle;
+}

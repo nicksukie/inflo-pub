@@ -1,0 +1,352 @@
+
+
+.comment {
+  border-radius: 0px;
+  background-color: white;
+  font-size: 8px;
+  font-family: Open Sans;
+  margin: 0px auto;
+  margin-bottom: 3px;
+
+
+  padding: 6px 6px;
+  max-width: 100%;
+  display: inline-block;
+  text-align: left;
+
+  border: 0.5px solid #d9dce0;
+  border-top: 0px solid grey;
+}
+
+
+
+div.comment > h6 {
+  display: inline-block;
+  float: right;
+  font-size: 10px;
+  font-weight: bold;
+  line-height: 14px;
+  vertical-align: middle;
+  margin: 0;
+  padding: 0;
+}
+
+div.comment > img {
+  height: 20px;
+}
+
+div.comment > span {
+  display: inline-block;
+  position: relative;
+  bottom: 5px;
+  margin-left: 5px;
+}
+
+
+
+
+p.commentType {
+  display: inline-flex;
+  float: right;
+  padding: 3px;
+  text-align: center;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+
+  color: #2b6dad;
+  font-weight: bold;
+  margin: 0;
+  cursor: default;
+  height: 100%;
+  cursor: default;
+}
+
+
+.typeRow {
+
+  display: inline-block;
+  height: 15px;
+  margin: 0px 0 3px 0;
+}
+
+
+
+
+.scoreContain {
+  margin: 0px 0 0 0;
+
+  height: 100%;
+  display: inline-block;
+
+  float: left;
+  width: 40px;
+  
+}
+
+.scoreContain>p {
+    font-size: 24px;
+    width: 36px;
+}
+
+
+.commentVote {
+
+  display: block;
+  cursor: pointer;
+
+
+}
+
+.arrowColor {
+
+color: #bbc0c4;
+}
+
+
+.insightContain {
+display: flex;
+justify-content: center;
+
+}
+
+.insightScore {
+  
+
+
+color: #6a737c;
+font-style: none;
+text-align: center;
+padding: 0 0 0 0;
+font-size: 20px;
+
+}
+
+
+
+
+.commentBody {
+margin-top: 0px;
+  display: block;
+  float: left;
+  width: 50%;
+  position:relative;
+
+}
+
+.comment-text-container {
+
+  display: inline-block;
+  border-left: 0px solid lightgrey;
+  width: 340px;
+  margin: 3px 0 0 4px;
+  padding: 4px;
+}
+
+
+
+.comment-text {
+  font-family: 'q_serif',Georgia,Times,serif;
+  font-size: 12px;
+  line-height: 1.5;
+  word-wrap: break-word;
+  padding: 0 10px 0 0px;
+}
+
+.comment-reply {
+  border-radius: 0px;
+  background-color: white;
+  font-size: 8px;
+  font-family: Open Sans;
+  margin: 0px 0px;
+  margin-left: 0px;
+  padding: 3px 7px;
+  border-left: 5px solid darkgrey;
+  width: 95%;
+  display: inline-block;
+  text-align: left;
+  float: left;
+}
+
+.comment-reply-input {
+  display: none;
+  border-radius: 5px;
+  border: 0px solid #008cba;
+
+  background-color: #f7f7f7;
+  font-size: 8px;
+  font-family: Open Sans;
+  margin: 4px 6px;
+  margin-left: 10px;
+  padding: 3px 7px;
+  width: 70%;
+  display: none;
+  text-align: left;
+}
+
+.comment-reply-input.show {
+  display: inline-block;
+}
+
+div.comment-reply-input > img {
+  height: 20px;
+}
+
+div.comment-reply-input > span {
+  display: inline-block;
+  position: relative;
+  bottom: 5px;
+  margin-left: 5px;
+}
+
+div.comment-reply > img {
+  height: 20px;
+}
+
+div.comment-reply > span {
+  display: inline-block;
+  position: relative;
+  bottom: 5px;
+  margin-left: 5px;
+}
+
+.comment-input {
+  display: block;
+  background-color: white;
+  border: 1px solid lightgrey;
+  font-weight: normal;
+
+  font-family: 'q_serif',Georgia,Times,"Times New Roman","Hiragino Kaku Gothic Pro","Meiryo",serif;
+  font-size: 12px;
+  margin: 8px auto;
+
+
+
+  border-radius: 4px;
+  min-height: 80px;
+
+  width: 90%;
+
+  resize: none;
+  overflow: auto;
+
+  padding: 3px;
+}
+
+
+
+
+
+
+.commentData {
+
+  margin: 10px 0 0 0;
+  display: inline-flex;
+  align-items: left;
+  float: right;
+  width: 40%;
+}
+
+.commentDataItem {
+
+  display: inline-flex;
+
+    width:70px;
+
+}
+
+
+
+.commentEndorse {
+
+  width: 40%;
+}
+
+.commentEndorse>button {
+border-radius: 4px;
+padding: 5px 7px;
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+
+
+
+}
+
+
+.disabled {
+
+  opacity: 0.6;
+}
+
+.commentRespond>h4 {
+  cursor: pointer;
+  display: none;
+}
+
+
+/*Comment Author Component*/
+.commentAuthorContainer {
+  display: inline-flex;
+
+  align-content: left;
+  padding: 3px;
+  width: 260px;
+}
+
+
+.commentImg{
+
+    margin: 8px 5px 0 5px;
+}
+.commentImg>img {
+
+
+
+width: 30px;
+
+}
+
+.commentAuthorData{
+  display: flex;
+
+  flex: 1;
+  flex-direction: column;
+  align-items: left;
+}
+
+.commentAuthorName{
+align-self: flex-start;
+
+}
+
+
+.commentAuthorName>a>h2 {
+
+font-size:  10px;
+margin: 3px auto;
+
+
+
+}
+
+.commentAuthorDate{
+
+align-self: none;
+\
+}
+
+.commentAuthorDate>h3  {
+
+font-size:  9px;
+margin: 3px auto;
+
+
+}
+
+
+
+

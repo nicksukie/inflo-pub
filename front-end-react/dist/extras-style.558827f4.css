@@ -1,0 +1,72 @@
+
+
+
+.content_column {
+  display: block;
+  width: 100%;
+  float: left;
+  border-right: 0px solid;
+  border-color: lightgrey;
+  padding: 0px 0px;
+  max-height: 700px;
+  overflow: hidden;
+
+  opacity: 0.7; 
+}
+
+.content_column:hover {
+
+  opacity: 1;
+  overflow-y: auto; 
+
+}*/
+
+
+.reshare_container {
+  display: block;
+  padding: 8px;
+  border-top: 3px solid #e7ecf1;
+}
+
+.reshare_container > h4 {
+  margin: 0 0;
+  font-size: 12px;
+  display: inline-block;
+  float: left;
+}
+
+.shareTo-AddURLMenu-div > h4 {
+  line-height: 24px;
+  vertical-align: middle;
+}
+
+.radioSection > h4 {
+  display: block;
+  float: left;
+  width: 70%;
+  margin: 8px 0px;
+}
+
+.radioSection > label {
+  display: block;
+  float: left;
+  width: 100%;
+}
+
+.sharetoUsersection {
+  width: 100%;
+}
+
+.border_container {
+  width: 100%;
+  padding-top: 10px;
+  border-top: 1px solid lightgrey;
+}
+
+.reshare {
+  margin-right: 20px;
+  margin-bottom: 40px;
+}
+
+
+

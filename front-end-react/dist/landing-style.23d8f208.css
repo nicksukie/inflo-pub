@@ -1,0 +1,72 @@
+
+.top-section {
+
+  background-image: url("orig_bg.d51fd296.png");
+  background-size:100% auto;
+  padding: 45px;
+  margin: 0;
+     background-size: cover;
+    background-repeat:no-repeat;
+    background-position:center; 
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    -ms-content-zooming: none;
+    position:absolute;
+
+    height:100%;
+    overflow: scroll;
+
+}
+
+
+
+
+.landing-container {
+
+
+  padding: 30px;
+  background-color: rgba(255,255,255,.7);
+  border-radius: 20px;
+  
+
+}
+
+.introtext {
+  text-align: center;
+  color: rgba(0,0,0,.7);
+}
+
+
+.flex-row {
+display: flex;
+align-items: center;
+justify-content: center;
+
+flex-wrap: wrap;
+}
+
+
+
+.flex-col {
+flex: 1;
+padding: 1em;
+border: 1px solid lightgrey;
+border-radius: 10px;
+margin: 25px 12px;
+justify-content: center;
+
+}
+
+.flex-col>h4 { 
+  color: rgba(0,0,0,.6);
+}
+
+.landing-footer {
+text-align: center;
+
+}
+.landinglink {
+  color: #5a85af;
+}
+

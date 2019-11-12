@@ -1,0 +1,122 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+h2, h3,h4, h5, h6 {
+
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+
+
+.login-page {
+  width: 80%;
+  padding: 8% 0 0;
+  margin: auto;
+}
+
+
+
+
+.form {
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  background: none;
+  max-width: 400px;
+  margin: 20px 10px 10px 10px;
+  padding: 10px 45px ;
+  text-align: center;
+  border-radius: 5px;
+  
+}
+.form input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: white;
+  width: 100%;
+  border: 1px solid lightgrey;
+  margin: 0 0 15px;
+  padding: 9px;
+  box-sizing: border-box;
+  font-size: 14px;
+  border-radius: 5px;
+}
+
+.form input:focus {
+  border: 3px solid #e9f6ff;
+  padding: 7px;
+  background-color: white;
+
+}
+
+.form button {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #426e9a;
+  width: 50%;
+  border: 0;
+  padding: 8px;
+  color: #ffffff;
+  font-size: 14px;
+  border-radius: 3px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+  font-weight: bold;
+}
+.form button:hover,
+.form button:active,
+.form button:focus {
+  background: #5a85af;
+}
+.form .message {
+  margin: 15px 0 0;
+  color: #b3b3b3;
+  font-size: 12px;
+}
+.form .message a {
+  color: #1671BF;
+  text-decoration: none;
+}
+.form .register-form {
+  display: inline-block;
+}
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 300px;
+  margin: 0 auto;
+}
+.container:before,
+.container:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.container .info {
+  margin: 50px auto;
+  text-align: center;
+}
+.container .info h1 {
+  margin: 0 0 15px;
+  padding: 0;
+  font-size: 36px;
+  font-weight: 300;
+  color: #1a1a1a;
+}
+.container .info span {
+  color: #4d4d4d;
+  font-size: 12px;
+}
+.container .info span a {
+  color: #000000;
+  text-decoration: none;
+}
+.container .info span .fa {
+  color: #ef3b3a;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: auto;
+}

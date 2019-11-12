@@ -1,0 +1,149 @@
+
+
+.content_view-nav {
+  margin: 6px 10px 1px 15px;
+  display: block;
+  position: relative;
+  width: 100%;
+}
+
+.button-left {
+  background-color: #008cba;
+  border: none;
+  color: white;
+  padding: 7px 13px;
+  margin: 5px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  vertical-align: center;
+  float: left;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: normal;
+  opacity: 0.8;
+}
+
+.button-left:hover {
+  opacity: 1;
+}
+
+.content_view {
+  margin: 0;
+  margin-top: 0px;
+  position: relative;
+  display: flex;
+  width: auto;
+  flex-direction: column;
+
+  padding-left: 18px;
+  z-index: 0;
+}
+
+.nav-flex-container {
+  display: inline-flex;
+  align-items: center;
+  height: 200px;
+  width: 50px;
+}
+
+.nav_arrow-left {
+  margin-top: 0px;
+  margin-right: -50px;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border-radius: 25px;
+  background-color: white;
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.2);
+  line-height: 40px;
+  text-align: center;
+  float: left;
+  vertical-align: center;
+  cursor: pointer;
+  left: 0px;
+  position: relative;
+}
+
+.nav_arrow-right {
+  margin-top: 0px;
+  margin-left: -35px;
+  display: inline;
+
+  width: 40px;
+  height: 40px;
+  border-radius: 25px;
+  background-color: white;
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.2);
+  line-height: 40px;
+  text-align: center;
+  float: right;
+  vertical-align: center;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.mainfeed_container,
+.category_container {
+  border: none;
+  padding: 0 10px;
+  width: 100%;
+  height: auto;
+  margin-left: 30px;
+  padding-bottom: 15px;
+  display: block;
+  overflow-x: visible;
+  transition: 0.5s;
+}
+
+.category_container {
+  border-bottom: 1px solid lightgrey;
+}
+
+.cb_layout-header {
+  display: inline-block;
+  width: 80%;
+  margin-right: 15px;
+  margin-left: 0px;
+  text-align: center;
+}
+
+.cb_layout-header > h2 {
+  display: inline-block;
+
+  text-align: center;
+}
+
+.cb_layout-header > p {
+  display: inline-block;
+  margin-left: 20px;
+  text-align: center;
+}
+
+select.sortselector {
+  width: 200px;
+  padding: 6px 6px;
+  margin-left: 5px;
+  border: none;
+  border-radius: 4px;
+  background-color: #f1f1f1;
+  display: inline-block;
+}
+
+
+select.typeselector {
+  width: 140px;
+  padding: 3px 6px;
+  margin-left: 5px;
+  border: none;
+  border-radius: 4px;
+  background-color: #f1f1f1;
+  display: inline-block;
+}
+
+.dashboard_title {
+
+  display: block;
+  width: 100%;
+}

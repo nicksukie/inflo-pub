@@ -1,0 +1,591 @@
+.main
+ {
+  position: relative;
+    z-index: 0;
+}
+
+
+.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  background-color: #333;
+  font-family: helvetica;
+
+  height: 44px;
+  /*margin-bottom: -50px;*/
+
+  width: 100%;
+  min-width: 600px;
+  font-size: 12px;
+
+  border-top: 0px solid;
+  border-color: #008cba;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+
+  position: fixed;
+}
+
+.topnav-scrolled {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+}
+
+.topnav > li {
+  float: left;
+}
+
+.topnav > a > img {
+  height: 25px;
+  padding: 10px;
+  display: block;
+  float: left;
+}
+
+ul.topnav li a {
+  display: block;
+  color: white;
+  background-color: #333;
+  text-align: center;
+  padding: 15px 15px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.community-select-topnav-div {
+  border: none;
+  font-weight: normal;
+  font-size: 14px;
+  padding: 5px;
+  margin: 3px 5px;
+  float: left;
+  display: inline-block;
+  position: relative;
+  width: 200px;
+  border-radius: 4px;
+}
+
+#COMMUNITY-SELECT-TOPNAV {
+  width: 90%;
+  padding: 5px;
+  margin: 0px 0px;
+  height: 28px;
+}
+
+.addURL-container {
+  position: relative;
+
+  float: right;
+  z-index: 1;
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.addURL-contents {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  width: 300px;
+  padding: 8px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  float: left;
+
+  top: 45px;
+  right: 0;
+  color: black;
+  margin: 0;
+  text-decoration: none;
+  float: left;
+  text-align: left;
+  border-radius: 4px;
+}
+
+.addURL-contents.show {
+  display: block;
+}
+
+div.addURL-contents h2 {
+  background-color: #eff0f5;
+  font-size: 17px;
+  padding: 5px;
+  display: block;
+  padding-left: 28px;
+  margin: 0;
+}
+
+.shareTo-AddURLMenu-div {
+  margin-left: 0px;
+  margin-top: 0px;
+  margin: 0px 0px;
+  padding: 0px;
+  width: 100%;
+  display: block;
+  float: left;
+  text-align: left;
+
+}
+
+.shareTo-AddURLMenu-div > h4 {
+  margin: 0px;
+  display: block;
+  float: left;
+  text-align: left;
+  font-size: 12px;
+}
+
+.shareTo-AddURLMenu-div > label {
+  margin-top: 0px;
+  display: block;
+  float: left;
+  text-align: left;
+}
+
+.shareTo-AddURLMenu-div > button {
+  margin: 0px;
+  display: inline-block;
+  float: right;
+}
+
+/*Share to User */
+
+.AddURLMenu {
+  margin-left: 50px;
+  width: 80%;
+  display: none;
+}
+
+.user {
+  margin-left: 50px;
+  display: none;
+}
+
+.community {
+  margin-left: 50px;
+  display: none;
+}
+
+#AddURL-userInput {
+  /*background-image: url('/css/searchicon.png');*/ /* Add a search icon to input */
+  background-position: 10px 12px; /* Position the search icon */
+  background-repeat: no-repeat; /* Do not repeat the icon image */
+
+  font-size: 12px; /* Increase font-size */
+  padding: 6px 10px 6px 10px; /* Add some padding */
+  border: 1px solid #ddd; /* Add a grey border */
+  margin-bottom: 6px; /* Add some space below the input */
+}
+
+#AddURL-shareUserUL {
+  /* Remove default list styling */
+  display: block;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+
+  margin-bottom: 15px;
+  overflow: auto;
+  width: 100%;
+}
+
+#AddURL-shareUserUL li a {
+  border: 1px solid #ddd; /* Add a border to all links */
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6; /* Grey background color */
+  padding: 3px; /* Add some padding */
+  text-decoration: none; /* Remove default text underline */
+  font-size: 10px; /* Increase the font-size */
+  color: black; /* Add a black text color */
+  display: block; /* Make it into a block element to fill the whole list */
+}
+
+#AddURL-shareUserUL li a:hover:not(.header) {
+  background-color: #eee; /* Add a hover effect to all links, except for headers */
+}
+
+/*Share to Community */
+
+/* The container */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-left: 25px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  line-height: 25px;
+  vertical-align: middle;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #2196f3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) 
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}*/
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+
+select.community_selector {
+  width: 80%;
+  padding: 6px 6px;
+  margin-left: 8px;
+  border: none;
+  border-radius: 4px;
+  background-color: #f1f1f1;
+  display: inline-block;
+}
+
+
+.notif-container {
+  position: relative;
+  z-index: 1;
+  float: right;
+
+  display: inline-block;
+}
+
+.notif-container img {
+  display: block;
+  color: white;
+  background-color: none;
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
+  cursor: pointer;
+  height: 24px;
+  float: left;
+}
+
+
+.notif-contents {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  width: 330px;
+
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  float: left;
+
+  top: 45px;
+  right: 0;
+  color: black;
+  margin: 0px;
+  text-decoration: none;
+  float: left;
+  text-align: left;
+  border-radius: 4px;
+  max-height: 250px;
+  overflow: auto;
+}
+
+.notif-contents.show {
+  display: block;
+}
+
+div.notif-contents h2 {
+  background-color: #eff0f1;
+  font-size: 17px;
+  padding: 5px;
+  display: block;
+  padding-left: 28px;
+  margin: 0;
+}
+
+.notif-item {
+  display: block;
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  cursor: pointer;
+  border-bottom: 1px solid lightgrey;
+    border-top: 1px solid lightgrey;
+}
+
+div.notif-contents h3 {
+  font-size: 14px;
+  padding: 5px;
+
+  margin: 0;
+  font-weight: normal;
+}
+
+div.notif-contents h4 {
+  font-size: 14px;
+  padding: 5px;
+  display: inline-block;
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: 0;
+  font-weight: normal;
+
+  color: green;
+}
+
+div.notif-contents h5 {
+  font-size: 12px;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-bottom: 5px;
+  padding-right: 15px;
+  margin: 0;
+  font-weight: normal;
+  float: right;
+
+  color: #008cba;
+}
+
+.notif-item:hover {
+  background-color: #f1f1f1;
+}
+
+.notif-item-user {
+
+  color: #b563c9;
+}
+
+
+.notif-item-headline {
+
+  color: #005fae;
+}
+
+.notif-item-description {
+  display: inline-block;
+  max-width: 70%;
+  height: 30px;
+  margin: 0 5px 0 0;
+  
+}
+
+
+.notif-item-time {
+  display: inline-block;
+  max-width: 25%;
+
+}
+
+
+
+
+/* Dropdown */
+
+.dropbtn {
+  display: block;
+  color: white;
+  background-color: #333;
+  text-align: center;
+  padding: 10px 15px;
+  padding-right: 20px;
+  text-decoration: none;
+  cursor: pointer;
+  height: 23px;
+}
+
+.dropdown {
+  position: relative;
+  float: right;
+  z-index: 1;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  width: 120px;
+
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+  float: left;
+
+  right: 0;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Change the li color on hover */
+
+ul.topnav li a:hover:not(.active),
+.topnav > a > img:hover,
+.dropdown:hover .dropbtn,
+.impact-container > img:hover,
+.notif-container > img:hover {
+  background-color: #555;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/*Chg color of active page */
+ul.topnav .active {
+  background-color: #409eeb;
+  color: white;
+}
+
+
+
+
+.addurl {
+
+  padding: 7px 8px;
+  margin: 5px 12px;
+}
+
+
+.submiturl {
+
+  padding: 7px 8px;
+  margin: 10px 0px 5px 0px;
+}
+
+
+/* Make it responsive
+@media screen and (max-width:600px){
+	ul.topnav li.right,
+	ul.topnav li {float: none;}
+	ul.topnav li.dropdown {float: none;}
+}
+
+ */
+
+
+.URLinput {
+
+  border: none;
+  font-weight: normal;
+  font-size: 14px;
+  padding: 5px;
+  margin: 8px 0px 6px 0px;
+
+  display: flex;
+
+  float: left;
+  width: 97%;
+}
+
+
+
+.newshare-fromURL {
+  margin-left: 0px;
+  margin-top: 3px;
+  width: 100%;
+}
+
+.newshare-fromURL-commentType {
+display: flex;
+  float: left;
+  margin-left: 15px;
+  padding-right: 5px;
+  width: 91.8%;
+  margin-top: 3px;
+align-items: center;
+
+  padding:5px;
+
+}
+
+
+.typeSelector {
+
+  display: inline-block;
+  width: 120px;
+  height: 100%;
+  vertical-align: middle;
+  margin-top: 2px;
+
+}
+
+.commentaryTypeHeader {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+  height: 100%;
+  line-height: 30px;
+  vertical-align: middle;
+  top: 5px;
+  padding-right: 3px;
+    color: #363a40;
+
+}
+
+
+.comment-input-fromURL {
+  display: block;
+  background-color: white;
+  border: 1px solid lightgrey;
+  font-weight: normal;
+
+  font-family: "Times New Roman", Times, serif;
+  font-size: 12px;
+  margin: 8px auto;
+  padding: 3px;
+  border-radius: 4px;
+  min-height: 80px;
+  width: 95%;
+  resize: none;
+  overflow: auto;
+}
+
