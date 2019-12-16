@@ -12,7 +12,7 @@ class NavBar extends React.Component {
             <img src={FloIcon} />
           </a>
           <li>
-            <a className="active" href="/">
+            <a className="dropdown" href="/">
               Dashboard
             </a>
           </li>

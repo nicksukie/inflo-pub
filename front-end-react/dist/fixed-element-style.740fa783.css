@@ -11,7 +11,7 @@
 
 .topfloatingmessage {
   list-style-type: none;
-  display: none;
+  display: block;
   margin: 0;
   padding: 9px;
 

@@ -8,7 +8,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 
-import jwt 
+import jwt
 
 class Comments(models.Model):
     commentid = models.AutoField(db_column='commentID', primary_key=True)  # Field name made lowercase.
@@ -18,7 +18,7 @@ class Comments(models.Model):
     votes = models.IntegerField()
     story = models.ForeignKey('Story', models.DO_NOTHING, db_column='storyID')  # Field name made lowercase.
     user = models.ForeignKey(User, models.DO_NOTHING, db_column='userID')
-    
+
       # Field name made lowercase.
     class Meta:
         managed = True
@@ -110,7 +110,7 @@ class User(models.Model):
     email = models.CharField(unique=True, max_length=250)
     username = models.CharField(max_length=250)
 
-    
+
     class Meta:
         managed = True
         db_table = 'User'
@@ -161,6 +161,12 @@ class AuthUser(models.Model):
     class Meta:
         managed = True
         db_table = 'auth_user'
+
+
+
+
+
+
 
 
 class AuthUserGroups(models.Model):

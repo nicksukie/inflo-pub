@@ -30627,7 +30627,7 @@ function (_React$Component) {
           id: "SHAREDBY2"
         }, "Shared by ", user.Name, _react.default.createElement("span", {
           id: "timePosted-cb"
-        }, " at ", user.Time)));
+        }, " on ", user.Time)));
       }), this.state.elipses);
     }
   }]);
@@ -31480,13 +31480,15 @@ function (_React$Component) {
         className: "scoreAndBody"
       }, _react.default.createElement("div", {
         className: "commentBody"
-      }, _react.default.createElement("div", {
+      }, " ", _react.default.createElement("div", {
         className: "comment-text-container"
-      }, _react.default.createElement("p", {
+      }, " ", _react.default.createElement("p", {
         className: "comment-text"
-      }, this.props.commentText))), _react.default.createElement("div", {
-        className: "commentData"
+      }, this.props.commentText), " "), _react.default.createElement("div", {
+        className: "commentDataContainer"
       }, _react.default.createElement("div", {
+        className: "commentData"
+      }, " ", " ", _react.default.createElement("div", {
         className: "commentAuthorContainer commentDataItem"
       }, _react.default.createElement("div", {
         className: "commentImg"
@@ -31494,11 +31496,11 @@ function (_React$Component) {
         src: _signinimage.default
       })), _react.default.createElement("div", {
         className: "commentAuthorData"
-      }, _react.default.createElement("div", {
+      }, " ", _react.default.createElement("div", {
         className: "commentAuthorName"
-      }, _react.default.createElement("h2", null, "by ", _react.default.createElement("span", null, this.props.commentauthor))), _react.default.createElement("div", {
+      }, _react.default.createElement("h2", null, "by", _react.default.createElement("span", null, " ", this.props.commentauthor)), " "), _react.default.createElement("div", {
         className: "commentAuthorDate"
-      }, " ", _react.default.createElement("h4", null, " on ", _react.default.createElement("span", null, " ", this.props.timestamp, " "))))))));
+      }, " ", _react.default.createElement("h4", null, " on ", _react.default.createElement("span", null, this.props.timestamp, " "))), " "), " "))))));
     }
   }]);
 
@@ -33016,7 +33018,7 @@ function (_React$Component) {
       }, _react.default.createElement("img", {
         src: _floIcon.default
       })), _react.default.createElement("li", null, _react.default.createElement("a", {
-        className: "active",
+        className: "dropdown",
         href: "/"
       }, "Dashboard"))), _react.default.createElement(_Profile.default, null), _react.default.createElement(_NotificationBar.default, null), _react.default.createElement(_AddUrl.default, null), _react.default.createElement("br", null), _react.default.createElement("br", null));
     }
@@ -33854,16 +33856,14 @@ function (_React$Component) {
       return _react.default.createElement("div", null, _react.default.createElement(_NavBar.default, null), _react.default.createElement("div", {
         className: "profile"
       }, _react.default.createElement("div", {
+        className: "userInfo"
+      }, _react.default.createElement("div", {
         className: "UserHeader"
       }, _react.default.createElement("div", {
         className: "userTextData"
       }, _react.default.createElement("h2", {
         className: "username"
-      }, this.state.username)), _react.default.createElement("div", {
-        className: "profileImageContainer"
-      }, _react.default.createElement("img", {
-        src: "#########"
-      }))), _react.default.createElement("div", {
+      }, this.state.username), _react.default.createElement("div", {
         className: "userStats"
       }, _react.default.createElement("div", {
         className: "userStat"
@@ -33876,7 +33876,11 @@ function (_React$Component) {
         className: "userStat"
       }, _react.default.createElement("h4", null, "Shares: ", this.state.shares)), _react.default.createElement("div", {
         className: "userStat"
-      }))), _react.default.createElement("div", {
+      })))), _react.default.createElement("div", {
+        className: "profileImageContainer"
+      }, _react.default.createElement("img", {
+        src: "#########"
+      })))), _react.default.createElement("div", {
         className: "UserProfileContent"
       }, _react.default.createElement("div", {
         className: "sharehistory"
@@ -33894,7 +33898,7 @@ function (_React$Component) {
           postdate: userstory.timeposted.substring(0, 10),
           details: userstory.details.substring(0, 120) + "...",
           headline: userstory.headline,
-          firstCommentary: userstory.firstcommentary.substring(0, 50)
+          firstCommentary: userstory.firstcommentary.substring(0, 200)
         });
       }))))));
     }
@@ -34123,7 +34127,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51897" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55730" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

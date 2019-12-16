@@ -11,7 +11,7 @@ import requests
 from bs4 import BeautifulSoup
 import urllib.parse
 import articleDateExtractor
-
+#from getCategoryAPI import getCategory
    
 
 
@@ -21,13 +21,22 @@ import articleDateExtractor
 #    url = input("Type a web address: ")
 #    return url
         
+def scrapeNewsHeadline(url): 
+    try: 
+        a = Article(url)
+        a.download()
+        a.parse()
+        _headline = a.title
+    except: 
+        _date, _headline, _thumbnail, _details, _originalStory, _source, _sourceLink, _isNews = ([],[],[],[],[],[],[],False)
+    return _headline
 
 def scrapeNews(url): 
     _source = ""
 
     #    url = getURL()
     #    url = "https://www.bloomberg.com/news/articles/2018-04-16/commerce-blocks-china-s-zte-from-exporting-technology-from-u-s"
-    try: 
+    try:
         a = Article(url)
         
         a.download()
@@ -41,6 +50,11 @@ def scrapeNews(url):
         _sourceLink = url
         _originalStory = 0
         _isNews = urls.valid_url(url)
+        #_category = getCategory(_headline+_details)
+        _category = getCategory('debug')
+            
+        #_author = a.authors
+        _author = []
         
                 
         if _details == False:    
@@ -56,20 +70,20 @@ def scrapeNews(url):
                 _source = "Reuters"
         
         if _date == None: 
-             _date = articleDateExtractor.extractArticlePublishedDate(url)
+            _date = articleDateExtractor.extractArticlePublishedDate(url)
         if _date == None: 
             _date = ""
-            
+    except: 
         
-        except: 
-            
-            a = type('test', (object,), {})()
-            _date, _headline, _thumbnail, _details, _originalStory, _source, _sourceLink, _isNews = ([],[],[],[],[],[],[],False)
-        
-        return _date, _headline, _thumbnail, _details, _originalStory, _source, _sourceLink, _isNews
+        a = type('test', (object,), {})()
+        _date, _headline, _thumbnail, _details, _originalStory, _source, _sourceLink, _isNews = ([],[],[],[],[],[],[],False)
     
-#  
+    return _date, _headline, _thumbnail, _details, _originalStory, _source, _sourceLink, _isNews
 
-#url = "https://www.ticketmaster.ie/venueartist/196734/1637161?irgwc=1&utm_term=427753&utm_source=219208&utm_medium=affiliate&utm_campaign=1108774&utm_content=7512"
+    
 
-#print(scrapeNews(url))
+
+
+url = "https://abcnews.go.com/International/wireStory/zealand-ban-criminals-guns-66901881"
+#
+print(scrapeNews(url))

@@ -1,13 +1,13 @@
-body{
-	overflow:visible;
-}
+
+
 .profile {
 	background-color: white;
-	margin: 0px;
+
 	padding: 35px;
-	padding-top: 70px;
+	padding: 60px;
 	margin: 0 7% 0 7%;
-	overflow:visible;
+
+
 }
 
 .UserHeader, .UserStats {
@@ -23,11 +23,6 @@ body{
 	font-size: 22px;
 
 }
-.userTextData { 
-margin-bottom: 5px;
-
-
- }
 
 
 .userName {
@@ -46,23 +41,25 @@ margin-bottom: 0;
 }
 
 
-.UserHeader { 
+.UserHeader {
 display: flex;
 flex-wrap: nowrap;
 align-content: stretch;
 
+
  }
 
 .userTextData {
-flex-grow: 7;
+flex-grow: 6;
 
 
 }
 
 
-.profileImageContainer { 
+.profileImageContainer {
 flex-grow: 3;
 padding: 20px;
+float: right;
  }
 
 
@@ -120,9 +117,10 @@ padding: 5px;
 	width: 100%;
 	border-top: 1px solid lightgrey;
 
-	
-	overflow-y: auto;
-	border-radius: 6px;
+
+	overflow-y: scroll;
+	border-radius: 0px;
+	height: 280px;
 }
 
  .histShareItemContainer {
@@ -198,7 +196,7 @@ float: left;
 }
 
 
-.histCommentData { 
+.histCommentData {
  	padding: 8px;
  	width: 50%;
  	margin: 3px 0 5px 0;
@@ -235,7 +233,7 @@ padding-top: 4px;
  .shareDate{
 
  	 	display: block;
- 	 	
+
 
  }
 

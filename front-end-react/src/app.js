@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Feed from "./Feed";
 import Login from "./Accounts/Login";
 import UserProfile from "./Accounts/UserProfile";
+
 import createAccount from "./Accounts/createAccount";
 
 class App extends React.Component {
@@ -15,6 +16,7 @@ class App extends React.Component {
           <Route path="/login" component={Login} />
           <Route path="/account" component={UserProfile} />
           <Route path="/createAccount" component={createAccount} />
+
         </Switch>
       </Router>
     );

@@ -1,0 +1,13 @@
+{"url": "https://www.bbc.co.uk/news/world-us-canada-50097838", "title": "US election 2020: Five charts on the Democratic race to take on Trump", "source": "BBC News", "date": "2019-11-05"}
+{"url": "https://apnews.com/d1b703d95c4c4902b780400c283323e1", "title": "What do 2020 Democrats say about California fires? Not much.", "source": "Associated Press", "date": "2019-11-01"}
+{"url": "https://www.cnn.com/2019/11/03/politics/2020-election-numbers/index.html", "title": "It's one year until the 2020 election. Here are 10 numbers you need to know", "source": "CNN", "date": "2019-11-03"}
+{"url": "https://apnews.com/a102911627b44c5e83e88e2138dab86f", "title": "1 person, 1 vote? Maybe not. NYC mulls ranked choice voting", "source": "Associated Press", "date": "2019-11-03"}
+{"url": "https://apnews.com/be66e546c9bf4d2a9c3ba9be3d87884c", "title": "What Virginia voters need to know for Election Day", "source": "Associated Press", "date": "2019-11-04"}
+{"url": "https://apnews.com/f264a5177814451a85c69372a0fb6941", "title": "Primary election chief back in spotlight after near-ouster", "source": "Associated Press", "date": "2019-11-04"}
+{"url": "https://www.bbc.co.uk/news/world-us-canada-50097838", "title": "US election 2020: Five charts on the Democratic race to take on Trump", "source": "BBC News", "date": "2019-11-05"}
+{"url": "https://apnews.com/0c63b9522ec54e13976bece30687cc47", "title": "New York's first election with early voting nears conclusion", "source": "Associated Press", "date": "2019-11-05"}
+{"url": "https://www.cnn.com/2019/11/06/politics/ayanna-pressley-endorses-elizabeth-warren/index.html", "title": "Ayanna Pressley endorses Elizabeth Warren in Democratic primary", "source": "CNN", "date": "2019-11-06"}
+{"url": "https://www.aljazeera.com/news/2019/11/elections-2020-debates-primaries-conventions-191106202602260.html", "title": "US elections 2020: When are the debates, primaries, conventions?", "source": "Al Jazeera English", "date": "2019-11-07"}
+{"url": "https://www.bbc.co.uk/news/world-us-canada-50355758", "title": "US election 2020: Michael Bloomberg joins race for White House", "source": "BBC News", "date": "2019-11-09"}
+{"url": "https://apnews.com/e8df7b38fb7f4eca8f69e1a1ee713e8f", "title": "Republican whose posts led to Trump ire to run for Congress", "source": "Associated Press", "date": "2019-11-09"}
+{"url": "https://www.bbc.co.uk/news/world-us-canada-50395911", "title": "Mark Sanford: Republican challenger to Trump gives up campaign", "source": "BBC News", "date": "2019-11-12"}

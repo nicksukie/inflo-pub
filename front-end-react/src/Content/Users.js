@@ -26,19 +26,19 @@ class Users extends React.Component {
           });
       }
     }
-    
+
   }
   render() {
     return (
     <div>
         {this.state.users.slice(0, 3).map(user => {
             return (
-              
+
               <div className="sharedby_user">
                 <img id="sharedby_user1" src={SignInImage}></img>
                 <h5 className="sharedby_text" id="SHAREDBY2">
-                Shared by {user.Name} 
-                <span id="timePosted-cb"> at {user.Time}</span>
+                Shared by {user.Name}
+                <span id="timePosted-cb"> on {user.Time}</span>
                 </h5>
               </div>
                 );

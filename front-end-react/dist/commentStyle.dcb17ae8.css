@@ -80,7 +80,7 @@ p.commentType {
 
   float: left;
   width: 40px;
-  
+
 }
 
 .scoreContain>p {
@@ -110,7 +110,7 @@ justify-content: center;
 }
 
 .insightScore {
-  
+
 
 
 color: #6a737c;
@@ -128,7 +128,7 @@ font-size: 20px;
 margin-top: 0px;
   display: block;
   float: left;
-  width: 50%;
+  width: 65%;
   position:relative;
 
 }
@@ -235,22 +235,28 @@ div.comment-reply > span {
 
 
 
+.commentDataContainer {
+  display: inline;
+  float: right;
 
+  width: 20%;
+
+}
 
 .commentData {
 
   margin: 10px 0 0 0;
-  display: inline-flex;
+  display: inline-block;
   align-items: left;
   float: right;
-  width: 40%;
+  width: 10%
 }
 
 .commentDataItem {
 
   display: inline-flex;
 
-    width:70px;
+    /*width:70px;*/
 
 }
 
@@ -346,7 +352,3 @@ margin: 3px auto;
 
 
 }
-
-
-
-

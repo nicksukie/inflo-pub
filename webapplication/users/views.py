@@ -42,6 +42,9 @@ from django.conf import settings
 
 import jwt
 
+from getCategoryAPI import getCategory
+
+
 #from .twitterPostCat import postToTwitter
 
 paginationIndex = 6
@@ -365,7 +368,8 @@ def insertDataToStory(_date, _headline, _thumbnail, _details, _originalStory, _s
 
 def addNewStory(_date, _headline, _thumbnail, _details, _originalStory, _source, _sourceLink, _isNews, _timePosted, user, commentaryText, commentaryType):
     #categories = ['Politics', 'Business', 'Entertainment','Tech','Sports']
-    _category = "debug"
+    #_category = "debug"
+    _category = getCategory(_headline+_details)
     story = insertDataToStory(_date, _headline, _thumbnail, _details, _originalStory, _source, _sourceLink, _timePosted, _category, _isNews)
 
     commentary = insertCommentIntoDB(story, user, commentaryText, commentaryType)
@@ -480,6 +484,16 @@ def userProf(request):
     return render(request, 'userProfile.html')
 
 #START TWITTER
+
+
+
+def returnsurveyarticles(request):
+    articles = SurveyArticle.objects.order_by('sarticleid')
+
+    dict_obj = model_to_dict(articles)
+
+    return JsonResponse(dict_obj)
+
 
 
 

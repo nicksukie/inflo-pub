@@ -1,0 +1,96 @@
+.cb_layout {
+  clear: none;
+  float: left;
+
+  border-radius: 5px;
+
+  padding-bottom: 0px;
+  margin: 10px;
+
+  width: 300px;
+  /*opacity: 0.7; */
+  background-color: white;
+  display: block;
+  position: relative;
+
+  transition: 0.1s;
+
+    border: 1px solid lightgrey;
+}
+
+
+
+.image_container {
+  height: 135px;
+  width: 100%;
+  margin-bottom: 0px;
+  display: block;
+}
+
+
+
+div.image_container > img {
+  /*margin-top: 10px;
+
+	margin-left: 5px; */
+  object-fit: cover; /*KEY to having image fit in parent div without stretching (centered)*/
+  margin-right: 0;
+  margin-bottom: 0px;
+  max-height: 100%;
+  width: 100%;
+  padding: 0;
+  /*float: left;
+	display: inline;*/
+}
+
+/* Headline */
+
+.info {
+  display: block;
+ padding: 0px 15px;
+
+  height: 250px;
+  width: 100%;
+  margin-bottom: 0px;
+  display: block;
+}
+
+.container {
+
+
+}
+
+#survey-section {
+
+  display: inline-block;
+  width: 500px;
+  overflow: auto;
+}
+
+
+.slider label {
+    position: absolute;
+    width: 20px;
+    margin-left: -10px;
+    margin-top: 20px;
+    font-size: 12px;
+    text-align: center;
+
+}
+
+/* below is not necessary, just for style */
+.slider {
+    width: 80%;
+    margin: 2em auto;
+    margin-bottom: 50px;
+    height: 30px;
+}
+
+.ui-slider-tick-mark{
+    display:inline-block;
+    width:1px;
+    background:grey;
+    height:16px;
+    position:absolute;
+    top:-2px;
+}

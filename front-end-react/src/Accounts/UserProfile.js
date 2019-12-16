@@ -22,7 +22,7 @@ componentDidMount()
         "http://127.0.0.1:8000/users/getuserstories?user=" + FeedStore.getUsername()
     ).then(result => result.json())
     .then(
-        stories => 
+        stories =>
         {
             let temp = []
             for (let idx in stories)
@@ -38,7 +38,7 @@ componentDidMount()
         "http://127.0.0.1:8000/users/getuserinfo?user=" + FeedStore.getUsername()
     ).then(result => result.json())
     .then(
-        userinfo => 
+        userinfo =>
         {
             this.setState({
                 username: userinfo["full_name"],
@@ -48,32 +48,47 @@ componentDidMount()
             })
         }
     );
-    
+
 }
 
   render() {
-    
+
     return (
+
     <div>
         <NavBar />
+        
         <div className="profile">
-        <div className="UserHeader">
-            <div className="userTextData">
-                <h2 className="username">{this.state.username}</h2>
-                    
-            </div>
-            <div className="profileImageContainer">
+
+        <div className="userInfo">
+
+
+          <div className="UserHeader">
+              <div className="userTextData">
+                      <h2 className="username">{this.state.username}</h2>
+
+
+
+
+            <div className="userStats">
+                <div className="userStat"><h4>Member Since: <span className="statDate" id="userImpactValue">{this.state.date_joined}</span></h4></div>
+                <div className="userSubStats">
+                    <div className="userStat"><h4>Shares: {this.state.shares}</h4></div>
+                    <div className="userStat"></div>
+                </div>
+                </div>
+              </div>
+
+
+
+          <div className="profileImageContainer">
                 <img src="#########" />
             </div>
-        </div>
-        <div className="userStats">
-            <div className="userStat"><h4>Member Since: <span className="statDate" id="userImpactValue">{this.state.date_joined}</span></h4></div>
-            <div className="userSubStats">
-                <div className="userStat"><h4>Shares: {this.state.shares}</h4></div>
-                <div className="userStat"></div>
+
+
+          </div>
             </div>
-        </div>
-      
+
         <div className="UserProfileContent">
             <div className = "sharehistory">
                 <h3>Share History</h3>
@@ -92,17 +107,16 @@ componentDidMount()
 
                             details={userstory.details.substring(0, 120) + "..."}
                             headline={userstory.headline}
-                            firstCommentary = {userstory.firstcommentary.substring(0, 50)}
+                            firstCommentary = {userstory.firstcommentary.substring(0, 200)}
                         />
                     );
                     })}
                 </div>
             </div>
-    
+
         </div>
         </div>
         </div>
     );
   }
   }
-

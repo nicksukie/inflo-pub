@@ -39,7 +39,7 @@
 }
 
 .topnav > a > img {
-  height: 25px;
+  height: 24px;
   padding: 10px;
   display: block;
   float: left;
@@ -253,7 +253,7 @@ div.addURL-contents h2 {
   background-color: #2196f3;
 }
 
-/* Create the indicator (the dot/circle - hidden when not checked) 
+/* Create the indicator (the dot/circle - hidden when not checked)
 .checkmark:after {
     content: "";
     position: absolute;
@@ -406,7 +406,7 @@ div.notif-contents h5 {
   max-width: 70%;
   height: 30px;
   margin: 0 5px 0 0;
-  
+
 }
 
 
@@ -427,7 +427,7 @@ div.notif-contents h5 {
   background-color: #333;
   text-align: center;
   padding: 10px 15px;
-  padding-right: 20px;
+  padding-right: px;
   text-decoration: none;
   cursor: pointer;
   height: 23px;
@@ -438,6 +438,7 @@ div.notif-contents h5 {
   float: right;
   z-index: 1;
   display: inline-block;
+  font-weight: bold;
 }
 
 .dropdown-content {
@@ -588,4 +589,3 @@ align-items: center;
   resize: none;
   overflow: auto;
 }
-

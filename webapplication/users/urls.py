@@ -19,5 +19,7 @@ urlpatterns = [
     path('api-token-verify/', verify_jwt_token),
     path('storevote', views.storeVote),
     path('getNotification', views.getNotification),
-    
+
+    #path('getsurveyarticles', getNewsArticlesforSurvey.getarticles)
+
 ]

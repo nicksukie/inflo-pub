@@ -11,7 +11,7 @@ import requests
 from bs4 import BeautifulSoup
 import urllib.parse
 import articleDateExtractor
-from getCategoryAPI import getCategory
+#from getCategoryAPI import getCategory
    
 
 
@@ -51,7 +51,7 @@ def scrapeNews(url):
         _originalStory = 0
         _isNews = urls.valid_url(url)
         #_category = getCategory(_headline+_details)
-        _category = getCategory('debug')
+#        _category = getCategory('debug')
             
         #_author = a.authors
         _author = []
@@ -84,6 +84,6 @@ def scrapeNews(url):
 
 
 
-#url = "https://www.reuters.com/article/us-davos-meeting-saudi-investors/saudis-to-davos-move-on-from-khashoggi-lets-do-business-idUSKCN1PI0TZ"
+#url = "https://abcnews.go.com/International/wireStory/zealand-ban-criminals-guns-66901881"
 #
 #print(scrapeNews(url))

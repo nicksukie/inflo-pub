@@ -52,24 +52,6 @@ CREATE TABLE Story (
  PRIMARY KEY (`storyID`)
 );
 
-CREATE TABLE blockedStory (
- storyID int(11) NOT NULL AUTO_INCREMENT,
- date varchar(500) NOT NULL,
- source varchar(500) DEFAULT NULL,
- thumbnail varchar(500) DEFAULT NULL,
- details varchar(10000) DEFAULT NULL,
- headline varchar(500) DEFAULT NULL,
- originalStory varchar(500) DEFAULT NULL,
- sourceLink varchar(500) DEFAULT NULL,
- url varchar(500) DEFAULT NULL,
- keywords varchar(500) DEFAULT NULL,
- timeposted varchar(500) DEFAULT NULL,
- category varchar(500) DEFAULT NULL,
- isNews varchar(10) NOT NULL,
- PRIMARY KEY (`storyID`)
-);
-
-
 CREATE TABLE Comments
 (
   commentID int NOT NULL AUTO_INCREMENT,
@@ -86,7 +68,7 @@ CREATE TABLE Comments
 CREATE TABLE USER_STORY
 (
   timestamp DATE NOT NULL,
-  id1 int NOT NULL AUTO_INCREMENT, 
+  id1 int NOT NULL AUTO_INCREMENT,
   userID int NOT NULL,
   storyID int NOT NULL,
   firstornot tinyint(4) NOT NULL,
@@ -132,3 +114,39 @@ CREATE TABLE ConnectionRequests
   FOREIGN KEY (senderUser) REFERENCES User(userID)
 );
 
+
+
+CREATE TABLE SurveyUser
+(
+suserid INT NOT NULL AUTO_INCREMENT,
+name varchar(500) NOT NULL,
+age int NOT NULL,
+region varchar(500) not NULL,
+gender varchar(10) not NULL,
+reponses_given int not NULL,
+primary key(suserid)
+);
+
+CREATE TABLE SurveyArticle
+(
+sarticleid int not null AUTO_INCREMENT,
+sourcename varchar(500) not NULL,
+pubdate varchar(500) not NULL,
+headline varchar(500) not NULL,
+description varchar(500) not NULL,
+thumbnail varchar(500) not NULL,
+url varchar(500) not NULL,
+primary key(sarticleid)
+);
+
+CREATE TABLE SurveyArticleVotes
+(
+sarticleid int not NULL,
+suserid int not NULL,
+q1response int not NULL,
+q2response int not NULL,
+primary key (sarticleid, suserid),
+foreign key (sarticleid) references SurveyArticle(sarticleid),
+foreign key (suserid) references SurveyUser(suserid)
+
+);
