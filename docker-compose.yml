@@ -1,0 +1,58 @@
+version: '3.3'
+services:
+  db:
+    image: mysql:5.7
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'db'
+      # So you don't have to use root, but you can if you like
+      MYSQL_USER: 'user'
+      # You can use whatever password you like
+      MYSQL_PASSWORD: 'password'
+      # Password for root access
+      MYSQL_ROOT_PASSWORD: 'password'
+    ports:
+      # <Port exposed> : < MySQL Port running inside container>
+      - '5000:3306'
+    expose:
+      # Opens port 3306 on the container
+      - '5000'
+      # Where our data will be persisted
+    volumes:
+      #- ./sql-scripts/:/docker-entrypoint-initdb.d/
+      - my-db:/var/lib/mysql
+# Names our volume
+  backend:
+    build: .
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - ./webapplication:/webapplication
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+
+  frontend:
+    image: node:8.9
+    command: npm run dev
+    working_dir: /front-end-react
+    ports:
+      - "1234:1234"
+    volumes:
+      - ./front-end-react/:/front-end-react
+
+  nginx:
+    image: nginx:latest
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./nginx/mime.types:/etc/nginx/mime.types
+      - ./front-end-react/dist:/etc/nginx/html
+      - ./front-end-react/dist:/usr/share/nginx/html
+      #- ./nginx/default.conf:/usr/share/nginx/default.conf # maps frontend build inside nginx
+      #- ./front-end-react/dist:/usr/share/nginx/html # maps frontend build inside nginx
+    depends_on:
+      - backend
+volumes:
+  my-db:
