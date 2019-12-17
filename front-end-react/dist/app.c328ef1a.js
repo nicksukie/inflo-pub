@@ -33615,7 +33615,7 @@ function (_React$Component) {
         }
       }, _react.default.createElement("input", {
         type: "text",
-        placeholder: "Full Name",
+        placeholder: "Username",
         name: "fullname"
       }), _react.default.createElement("input", {
         type: "text",
@@ -33641,7 +33641,7 @@ function (_React$Component) {
         }
       }, _react.default.createElement("input", {
         type: "text",
-        placeholder: "Email address",
+        placeholder: "Username",
         name: "email"
       }), _react.default.createElement("input", {
         type: "password",
@@ -34127,7 +34127,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55730" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57779" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

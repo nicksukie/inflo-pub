@@ -76,7 +76,7 @@ let createAccountForm =  <div className="form"><form className="register-form" o
               this.handleCreate(event);
             }}
             >
-            <input type="text" placeholder="Full Name" name="fullname"/>
+            <input type="text" placeholder="Username" name="fullname"/>
             <input type="text" placeholder="Email address" name="email"/>
             <input type="password" placeholder="Password" name="password"/>
             <input type="password" placeholder="Confirm Password" />
@@ -95,7 +95,7 @@ let loginForm = <div className="form">
               this.handleSubmit(event);
             }}
           >
-            <input type="text" placeholder="Email address" name="email" />
+            <input type="text" placeholder="Username" name="email" />
             <input type="password" placeholder="Password" name="password" />
             <button>Login</button>
             <p className="message">
