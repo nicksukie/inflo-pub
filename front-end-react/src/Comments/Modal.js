@@ -69,7 +69,7 @@ class Modal extends React.Component {
               this.setState({ comments: [...this.state.comments, result[r]] });
           }
           this.state.story.details =
-            this.state.story.details.substring(0, 150) + "... (Click to read full article)";
+            this.state.story.details + "... (Click to read full article)";
           this.setState({
             isLoaded: true,
             items: result.items
@@ -87,7 +87,7 @@ class Modal extends React.Component {
   setSortType(event){
     let index = event.nativeEvent.target.selectedIndex;
     let text = event.nativeEvent.target[index].text
-    
+
     if(text == "")
       text = "Most Recent"
     this.setState({ comments:[], sortType: text },
@@ -129,7 +129,7 @@ class Modal extends React.Component {
           &times;
         </span>
         <InteractionBlock
-          
+
           storyID={this.state.story.storyid}
           sourceLink={this.state.story.sourcelink}
           thumbnail={this.state.story.thumbnail}
