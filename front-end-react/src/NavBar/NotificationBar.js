@@ -17,8 +17,8 @@ export default class NotificationBar extends React.Component {
     fetch(
       FeedStore.getsiteprefix() + "getNotification", {
         method: 'GET',
-        withCredentials: true,
-        credentials: 'include',
+        withCredentials: false,
+
         headers: {
         'Authorization': 'Bearer ' + FeedStore.getToken(),
         }
@@ -61,4 +61,3 @@ export default class NotificationBar extends React.Component {
     );
   }
 }
-

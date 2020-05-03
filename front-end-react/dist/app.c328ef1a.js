@@ -32473,21 +32473,22 @@ function (_React$Component) {
       fetch(_FeedStore.default.getsiteprefix() + "getpages?pageNumber=" + this.state.pageNumber + "&category=" + cat + "&sortType=" + this.state.sortType, {
         method: 'GET',
         withCredentials: true,
-        credentials: 'include',
+        credentials: '',
         headers: {
           'Authorization': 'Bearer ' + _FeedStore.default.getToken()
         }
       }).then(function (res) {
         return res.json();
       }).then(function (result) {
-        if (result == "Expired" || result == "Other Error") {
-          window.location.href = '/login';
-        } else {
-          for (var r in result) {
-            _this2.setState({
-              stories: [].concat(_toConsumableArray(_this2.state.stories), [result[r]])
-            });
+        /*  if (result == "Expired" || result == "Other Error")
+          {
+            window.location.href = '/login';
           }
+          else{ */
+        for (var r in result) {
+          _this2.setState({
+            stories: [].concat(_toConsumableArray(_this2.state.stories), [result[r]])
+          });
         }
       });
     }
@@ -32842,8 +32843,7 @@ function (_React$Component) {
 
       fetch(_FeedStore.default.getsiteprefix() + "getNotification", {
         method: 'GET',
-        withCredentials: true,
-        credentials: 'include',
+        withCredentials: false,
         headers: {
           'Authorization': 'Bearer ' + _FeedStore.default.getToken()
         }
@@ -34127,7 +34127,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55703" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59208" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

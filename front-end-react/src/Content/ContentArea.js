@@ -65,7 +65,7 @@ class ContentArea extends React.Component {
       return "noCategories"
     for(i=0;i<this.state.categories.length-1;i++)
     {
-      categories += this.state.categories[i] + ","; 
+      categories += this.state.categories[i] + ",";
     }
     categories += this.state.categories[i];
     return categories;
@@ -79,7 +79,7 @@ class ContentArea extends React.Component {
     else{
       for(i=0;i<this.state.categories.length-1;i++)
       {
-        cat += this.state.categories[i] + ","; 
+        cat += this.state.categories[i] + ",";
       }
       cat += this.state.categories[i];
     }
@@ -88,7 +88,7 @@ class ContentArea extends React.Component {
       FeedStore.getsiteprefix() + "getpages?pageNumber=" + this.state.pageNumber + "&category=" + cat + "&sortType=" + this.state.sortType, {
         method: 'GET',
         withCredentials: true,
-        credentials: 'include',
+        credentials: '',
         headers: {
         'Authorization': 'Bearer ' + FeedStore.getToken(),
         }
@@ -97,16 +97,16 @@ class ContentArea extends React.Component {
       .then(res => res.json())
       .then(
         result => {
-          if (result == "Expired" || result == "Other Error")
+        /*  if (result == "Expired" || result == "Other Error")
           {
-            window.location.href = '/login'; 
+            window.location.href = '/login';
           }
-          else{
+          else{ */
             for (var r in result) {
               this.setState({ stories: [...this.state.stories, result[r]] });
             }
-          }
-        } 
+
+        }
       );
   }
 
@@ -128,7 +128,7 @@ class ContentArea extends React.Component {
       this.paginateContent();
     });
   }
-  
+
   setSortSelection(event)
   {
     let index = event.nativeEvent.target.selectedIndex;
